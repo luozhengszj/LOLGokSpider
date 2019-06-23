@@ -1,0 +1,374 @@
+<data>
+    <hero name="牛魔">
+        <another_name>牛魔</another_name>
+        <another_name>牛</another_name>
+        <another_name>牛魔王</another_name>
+    </hero>
+    <hero name="武则天">
+        <another_name>武则天</another_name>
+        <another_name>女王</another_name>
+    </hero>
+    <hero name="典韦">
+        <another_name>典韦</another_name>
+    </hero>
+    <hero name="墨子">
+        <another_name>墨子</another_name>
+        <another_name>墨一炮</another_name>
+         <another_name>墨</another_name>
+    </hero>
+    <hero name="蔡文姬">
+        <another_name>蔡文姬</another_name>
+        <another_name>奶妈</another_name>
+    </hero>
+    <hero name="雅典娜">
+        <another_name>雅典娜</another_name>
+    </hero>
+    <hero name="米莱狄">
+        <another_name>米莱狄</another_name>
+        <another_name>米莱秋</another_name>
+    </hero>
+    <hero name="黄忠">
+        <another_name>黄忠</another_name>
+    </hero>
+    <hero name="庄周">
+        <another_name>庄周</another_name>
+        <another_name>鱼</another_name>
+    </hero>
+    <hero name="宫本武藏">
+        <another_name>宫本武藏</another_name>
+        <another_name>宫本</another_name>
+        <another_name>武藏</another_name>
+    </hero>
+    <hero name="王昭君">
+        <another_name>王昭君</another_name>
+        <another_name>昭君</another_name>
+    </hero>
+    <hero name="钟馗">
+        <another_name>钟馗</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="哪吒">
+        <another_name>哪吒</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="伽罗">
+        <another_name>伽罗</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="女娲">
+        <another_name>女娲</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="孙膑">
+        <another_name>孙膑</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="狄仁杰">
+        <another_name>狄仁杰</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="太乙真人">
+        <another_name>太乙真人</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="李白">
+        <another_name>李白</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="弈星">
+        <another_name>弈星</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="孙悟空">
+        <another_name>孙悟空</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="张良">
+        <another_name>张良</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="小乔">
+        <another_name>小乔</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="白起">
+        <another_name>白起</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="张飞">
+        <another_name>张飞</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="甄姬">
+        <another_name>甄姬</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="成吉思汗">
+        <another_name>成吉思汗</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="鬼谷子">
+        <another_name>鬼谷子</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="铠">
+        <another_name>铠</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="虞姬">
+        <another_name>虞姬</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="百里玄策">
+        <another_name>百里玄策</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="嬴政">
+        <another_name>嬴政</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="明世隐">
+        <another_name>明世隐</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="后羿">
+        <another_name>后羿</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="高渐离">
+        <another_name>高渐离</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="孙策">
+        <another_name>孙策</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="鲁班七号">
+        <another_name>鲁班七号</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="刘禅">
+        <another_name>刘禅</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="刘邦">
+        <another_name>刘邦</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="廉颇">
+        <another_name>廉颇</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="亚瑟">
+        <another_name>亚瑟</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="钟无艳">
+        <another_name>钟无艳</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="周瑜">
+        <another_name>周瑜</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="李信">
+        <another_name>李信</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="盘古">
+        <another_name>盘古</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="程咬金">
+        <another_name>程咬金</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="李元芳">
+        <another_name>李元芳</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="大乔">
+        <another_name>大乔</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="东皇太一">
+        <another_name>东皇太一</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="瑶">
+        <another_name>瑶</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="阿轲">
+        <another_name>阿轲</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="项羽">
+        <another_name>项羽</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="元歌">
+        <another_name>元歌</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="孙尚香">
+        <another_name>孙尚香</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="曹操">
+        <another_name>曹操</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="夏侯惇">
+        <another_name>夏侯惇</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="狂铁">
+        <another_name>狂铁</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="橘右京">
+        <another_name>橘右京</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="云中君">
+        <another_name>云中君</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="娜可露露">
+        <another_name>娜可露露</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="上官婉儿">
+        <another_name>上官婉儿</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="干将莫邪">
+        <another_name>干将莫邪</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="百里守约">
+        <another_name>百里守约</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="安琪拉">
+        <another_name>安琪拉</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="韩信">
+        <another_name>韩信</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="妲己">
+        <another_name>妲己</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="兰陵王">
+        <another_name>兰陵王</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="刘备">
+        <another_name>刘备</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="盾山">
+        <another_name>盾山</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="老夫子">
+        <another_name>老夫子</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="不知火舞">
+        <another_name>不知火舞</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="诸葛亮">
+        <another_name>诸葛亮</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="达摩">
+        <another_name>达摩</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="嫦娥">
+        <another_name>嫦娥</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="吕布">
+        <another_name>吕布</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="苏烈">
+        <another_name>苏烈</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="赵云">
+        <another_name>赵云</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="露娜">
+        <another_name>露娜</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="花木兰">
+        <another_name>花木兰</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="关羽">
+        <another_name>关羽</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="芈月">
+        <another_name>芈月</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="姜子牙">
+        <another_name>姜子牙</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="司马懿">
+        <another_name>司马懿</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="沈梦溪">
+        <another_name>沈梦溪</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="扁鹊">
+        <another_name>扁鹊</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="杨戬">
+        <another_name>杨戬</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="杨玉环">
+        <another_name>杨玉环</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="貂蝉">
+        <another_name>貂蝉</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="公孙离">
+        <another_name>公孙离</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="马可波罗">
+        <another_name>马可波罗</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="猪八戒">
+        <another_name>猪八戒</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="裴擒虎">
+        <another_name>裴擒虎</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="梦奇">
+        <another_name>梦奇</another_name>
+        <another_name>别名</another_name>
+    </hero>
+</data>

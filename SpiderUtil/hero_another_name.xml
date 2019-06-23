@@ -1,0 +1,737 @@
+<data>
+    <hero name="万花通灵">
+        <another_name>万花通灵</another_name>
+        <another_name>妮蔻</another_name>
+        <another_name>你扣</another_name>
+    </hero>
+    <hero name="不祥之刃">
+        <another_name>不祥之刃</another_name>
+        <another_name>卡特</another_name>
+        <another_name>卡特琳娜</another_name>
+        <another_name>不祥</another_name>
+    </hero>
+    <hero name="九尾妖狐">
+        <another_name>九尾妖狐</another_name>
+        <another_name>狐狸</another_name>
+        <another_name>阿狸</another_name>
+    </hero>
+    <hero name="亡灵战神">
+        <another_name>亡灵战神</another_name>
+        <another_name>老司机</another_name>
+        <another_name>赛恩</another_name>
+    </hero>
+    <hero name="仙灵女巫">
+        <another_name>仙灵女巫</another_name>
+        <another_name>露露</another_name>
+        <another_name>璐璐</another_name>
+        <another_name>路路</another_name>
+    </hero>
+    <hero name="众星之子">
+        <another_name>众星之子</another_name>
+        <another_name>奶妈</another_name>
+        <another_name>索拉卡</another_name>
+    </hero>
+    <hero name="傲之追猎者">
+        <another_name>傲之追猎者</another_name>
+        <another_name>雷恩加尔</another_name>
+        <another_name>狮子狗</another_name>
+    </hero>
+    <hero name="光辉女郎">
+        <another_name>光辉女郎</another_name>
+        <another_name>拉克丝</another_name>
+        <another_name>光辉</another_name>
+    </hero>
+    <hero name="兽灵行者">
+        <another_name>兽灵行者</another_name>
+        <another_name>乌迪尔</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="冰晶凤凰">
+        <another_name>冰晶凤凰</another_name>
+        <another_name>艾尼维亚</another_name>
+        <another_name>凤凰</another_name>
+        <another_name>冰鸟</another_name>
+    </hero>
+    <hero name="冰霜女巫">
+        <another_name>冰霜女巫</another_name>
+        <another_name>丽桑卓</another_name>
+        <another_name>冰女</another_name>
+    </hero>
+    <hero name="刀锋之影">
+        <another_name>刀锋之影</another_name>
+        <another_name>泰隆</another_name>
+        <another_name>男刀</another_name>
+    </hero>
+    <hero name="刀锋舞者">
+        <another_name>刀锋舞者</another_name>
+        <another_name>艾瑞莉娅</another_name>
+        <another_name>女刀</another_name>
+    </hero>
+    <hero name="北地之怒">
+        <another_name>北地之怒</another_name>
+        <another_name>瑟庄妮</another_name>
+        <another_name>猪妹</another_name>
+        <another_name>猪女</another_name>
+    </hero>
+    <hero name="卡牌大师">
+        <another_name>卡牌大师</another_name>
+        <another_name>崔斯特</another_name>
+        <another_name>卡牌</another_name>
+    </hero>
+    <hero name="发条魔灵">
+        <another_name>发条魔灵</another_name>
+        <another_name>发条</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="唤潮鲛姬">
+        <another_name>唤潮鲛姬</another_name>
+        <another_name>娜美</another_name>
+        <another_name>美人鱼</another_name>
+    </hero>
+    <hero name="圣枪游侠">
+        <another_name>圣枪游侠</another_name>
+        <another_name>卢锡安</another_name>
+        <another_name>奥巴马</another_name>
+    </hero>
+    <hero name="圣锤之毅">
+        <another_name>圣锤之毅</another_name>
+        <another_name>波比</another_name>
+    </hero>
+    <hero name="堕落天使">
+        <another_name>堕落天使</another_name>
+        <another_name>莫甘娜</another_name>
+        <another_name>堕落</another_name>
+    </hero>
+    <hero name="复仇之矛">
+        <another_name>复仇之矛</another_name>
+        <another_name>卡莉丝塔</another_name>
+        <another_name>卡莉斯塔</another_name>
+        <another_name>滑板鞋</another_name>
+    </hero>
+    <hero name="复仇焰魂">
+        <another_name>复仇焰魂</another_name>
+        <another_name>布兰德</another_name>
+        <another_name>火男</another_name>
+    </hero>
+    <hero name="大发明家">
+        <another_name>大发明家</another_name>
+        <another_name>黑默丁格</another_name>
+        <another_name>发明家</another_name>
+        <another_name>大头</another_name>
+    </hero>
+    <hero name="天启者">
+        <another_name>天启者</another_name>
+        <another_name>卡尔玛</another_name>
+        <another_name>扇子妈</another_name>
+    </hero>
+    <hero name="寒冰射手">
+        <another_name>寒冰射手</another_name>
+        <another_name>艾希</another_name>
+        <another_name>寒冰</another_name>
+    </hero>
+    <hero name="山隐之焰">
+        <another_name>山隐之焰</another_name>
+        <another_name>奥恩</another_name>
+    </hero>
+    <hero name="岩雀">
+        <another_name>岩雀</another_name>
+        <another_name>塔莉垭</another_name>
+        <another_name>塔利亚</another_name>
+    </hero>
+    <hero name="幻翎">
+        <another_name>幻翎</another_name>
+        <another_name>洛</another_name>
+        <another_name>落</another_name>
+    </hero>
+    <hero name="弗雷尔卓德之心">
+        <another_name>弗雷尔卓德之心</another_name>
+        <another_name>布隆</another_name>
+        <another_name>防盗门</another_name>
+    </hero>
+    <hero name="影流之主">
+        <another_name>影流之主</another_name>
+        <another_name>劫</another_name>
+    </hero>
+    <hero name="影流之镰">
+        <another_name>影流之镰</another_name>
+        <another_name>凯隐</another_name>
+        <another_name>凯</another_name>
+    </hero>
+    <hero name="德玛西亚之力">
+        <another_name>德玛西亚之力</another_name>
+        <another_name>盖伦</another_name>
+        <another_name>德玛西亚</another_name>
+    </hero>
+    <hero name="德玛西亚之翼">
+        <another_name>德玛西亚之翼</another_name>
+        <another_name>奎因</another_name>
+    </hero>
+    <hero name="德玛西亚皇子">
+        <another_name>德玛西亚皇子</another_name>
+        <another_name>嘉文</another_name>
+        <another_name>嘉文四世</another_name>
+        <another_name>皇子</another_name>
+        <another_name>王子</another_name>
+    </hero>
+    <hero name="德邦总管">
+        <another_name>德邦总管</another_name>
+        <another_name>赵信</another_name>
+        <another_name>德邦</another_name>
+    </hero>
+    <hero name="恶魔小丑">
+        <another_name>恶魔小丑</another_name>
+        <another_name>萨科</another_name>
+        <another_name>小丑</another_name>
+    </hero>
+    <hero name="惩戒之箭">
+        <another_name>惩戒之箭</another_name>
+        <another_name>维鲁斯</another_name>
+        <another_name>韦鲁斯</another_name>
+    </hero>
+    <hero name="戏命师">
+        <another_name>戏命师</another_name>
+        <another_name>烬</another_name>
+        <another_name>尽</another_name>
+    </hero>
+    <hero name="战争之影">
+        <another_name>战争之影</another_name>
+        <another_name>赫卡里姆</another_name>
+        <another_name>人马</another_name>
+    </hero>
+    <hero name="战争之王">
+        <another_name>战争之王</another_name>
+        <another_name>潘森</another_name>
+    </hero>
+    <hero name="战争女神">
+        <another_name>战争女神</another_name>
+        <another_name>希维尔</another_name>
+        <another_name>轮子妈</another_name>
+    </hero>
+    <hero name="扭曲树精">
+        <another_name>扭曲树精</another_name>
+        <another_name>茂凯</another_name>
+        <another_name>大树</another_name>
+    </hero>
+    <hero name="披甲龙龟">
+        <another_name>披甲龙龟</another_name>
+        <another_name>拉莫斯</another_name>
+        <another_name>龙龟</another_name>
+    </hero>
+    <hero name="探险家">
+        <another_name>探险家</another_name>
+        <another_name>伊泽瑞尔</another_name>
+        <another_name>EZ</another_name>
+        <another_name>伊泽</another_name>
+        <another_name>EJ</another_name>
+    </hero>
+    <hero name="放逐之刃">
+        <another_name>放逐之刃</another_name>
+        <another_name>锐雯</another_name>
+        <another_name>瑞文</another_name>
+    </hero>
+    <hero name="无双剑姬">
+        <another_name>无双剑姬</another_name>
+        <another_name>剑姬</another_name>
+        <another_name>菲奥娜</another_name>
+    </hero>
+    <hero name="无极剑圣">
+        <another_name>无极剑圣</another_name>
+        <another_name>剑圣</another_name>
+        <another_name>易大师</another_name>
+        <another_name>易</another_name>
+    </hero>
+    <hero name="无畏战车">
+        <another_name>无畏战车</another_name>
+        <another_name>别名</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="时光守护者">
+        <another_name>时光守护者</another_name>
+        <another_name>时光</another_name>
+        <another_name>时光老头</another_name>
+        <another_name>基兰</another_name>
+        <another_name>基佬</another_name>
+    </hero>
+    <hero name="时间刺客">
+        <another_name>时间刺客</another_name>
+        <another_name>别名</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="星界游神">
+        <another_name>星界游神</another_name>
+        <another_name>巴德</another_name>
+    </hero>
+    <hero name="暗夜猎手">
+        <another_name>暗夜猎手</another_name>
+        <another_name>薇恩</another_name>
+        <another_name>VN</another_name>
+        <another_name>维恩</another_name>
+        <another_name>韦恩</another_name>
+    </hero>
+    <hero name="暗裔剑魔">
+        <another_name>暗裔剑魔</another_name>
+        <another_name>亚托克斯</another_name>
+        <another_name>剑魔</another_name>
+    </hero>
+    <hero name="暗黑元首">
+        <another_name>暗黑元首</another_name>
+        <another_name>球女</another_name>
+        <another_name>辛德拉</another_name>
+    </hero>
+    <hero name="暮光之眼">
+        <another_name>暮光之眼</another_name>
+        <another_name>慎</another_name>
+        <another_name>肾</another_name>
+    </hero>
+    <hero name="暮光星灵">
+        <another_name>暮光星灵</another_name>
+        <another_name>佐伊</another_name>
+    </hero>
+    <hero name="暴怒骑士">
+        <another_name>暴怒骑士</another_name>
+        <another_name>克烈</another_name>
+        <another_name>骑士</another_name>
+    </hero>
+    <hero name="暴走萝莉">
+        <another_name>暴走萝莉</another_name>
+        <another_name>萝莉</another_name>
+        <another_name>金克丝</another_name>
+    </hero>
+    <hero name="曙光女神">
+        <another_name>曙光女神</another_name>
+        <another_name>日女</another_name>
+        <another_name>蕾欧娜</another_name>
+        <another_name>女坦</another_name>
+    </hero>
+    <hero name="未来守护者">
+        <another_name>未来守护者</another_name>
+        <another_name>杰斯</another_name>
+        <another_name>高富帅</another_name>
+    </hero>
+    <hero name="末日使者">
+        <another_name>末日使者</another_name>
+        <another_name>费德提克</another_name>
+        <another_name>末日</another_name>
+        <another_name>稻草人</another_name>
+    </hero>
+    <hero name="机械先驱">
+        <another_name>机械先驱</another_name>
+        <another_name>维克托</another_name>
+        <another_name>三只手</another_name>
+    </hero>
+    <hero name="机械公敌">
+        <another_name>机械公敌</another_name>
+        <another_name>兰博</another_name>
+        <another_name>烧烤</another_name>
+    </hero>
+    <hero name="正义天使">
+        <another_name>正义天使</another_name>
+        <another_name>凯尔</another_name>
+        <another_name>天使</another_name>
+    </hero>
+    <hero name="正义巨像">
+        <another_name>正义巨像</another_name>
+        <another_name>加里奥</another_name>
+    </hero>
+    <hero name="武器大师">
+        <another_name>武器大师</another_name>
+        <another_name>武器</another_name>
+        <another_name>贾克斯</another_name>
+    </hero>
+    <hero name="死亡颂唱者">
+        <another_name>死亡颂唱者</another_name>
+        <another_name>死歌</another_name>
+        <another_name>卡尔萨斯</another_name>
+    </hero>
+    <hero name="殇之木乃伊">
+        <another_name>殇之木乃伊</another_name>
+        <another_name>木木</another_name>
+        <another_name>阿木木</another_name>
+    </hero>
+    <hero name="水晶先锋">
+        <another_name>水晶先锋</another_name>
+        <another_name>斯卡纳</another_name>
+        <another_name>蝎子</another_name>
+    </hero>
+    <hero name="永恒梦魇">
+        <another_name>永恒梦魇</another_name>
+        <another_name>魔腾</another_name>
+        <another_name>梦魇</another_name>
+        <another_name>关灯</another_name>
+    </hero>
+    <hero name="永猎双子">
+        <another_name>永猎双子</another_name>
+        <another_name>千珏</another_name>
+        <another_name>千绝</another_name>
+    </hero>
+    <hero name="沙漠死神">
+        <another_name>沙漠死神</another_name>
+        <another_name>内瑟斯</another_name>
+        <another_name>狗头</another_name>
+    </hero>
+    <hero name="沙漠皇帝">
+        <another_name>沙漠皇帝</another_name>
+        <another_name>阿兹尔</another_name>
+        <another_name>沙皇</another_name>
+    </hero>
+    <hero name="河流之王">
+        <another_name>河流之王</another_name>
+        <another_name>塔姆</another_name>
+    </hero>
+    <hero name="法外狂徒">
+        <another_name>法外狂徒</another_name>
+        <another_name>格雷福斯</another_name>
+        <another_name>男枪</another_name>
+    </hero>
+    <hero name="海兽祭司">
+        <another_name>海兽祭司</another_name>
+        <another_name>俄洛伊</another_name>
+        <another_name>触手</another_name>
+        <another_name>触手怪</another_name>
+    </hero>
+    <hero name="海洋之灾">
+        <another_name>海洋之灾</another_name>
+        <another_name>普朗克</another_name>
+        <another_name>船长</another_name>
+    </hero>
+    <hero name="深海泰坦">
+        <another_name>深海泰坦</another_name>
+        <another_name>诺提勒斯</another_name>
+        <another_name>诺提了个</another_name>
+        <another_name>泰坦</another_name>
+    </hero>
+    <hero name="深渊巨口">
+        <another_name>深渊巨口</another_name>
+        <another_name>克格莫</another_name>
+        <another_name>大嘴</another_name>
+    </hero>
+    <hero name="潮汐海灵">
+        <another_name>潮汐海灵</another_name>
+        <another_name>菲兹</another_name>
+        <another_name>小鱼人</another_name>
+        <another_name>鱼人</another_name>
+        <another_name>小鱼</another_name>
+    </hero>
+    <hero name="炼金术士">
+        <another_name>炼金术士</another_name>
+        <another_name>辛吉德</another_name>
+        <another_name>炼金</another_name>
+    </hero>
+    <hero name="熔岩巨兽">
+        <another_name>熔岩巨兽</another_name>
+        <another_name>墨菲特</another_name>
+        <another_name>石头人</another_name>
+        <another_name>石头</another_name>
+    </hero>
+    <hero name="爆破鬼才">
+        <another_name>爆破鬼才</another_name>
+        <another_name>吉格斯</another_name>
+        <another_name>炸弹人</another_name>
+        <another_name>炸弹</another_name>
+    </hero>
+    <hero name="牛头酋长">
+        <another_name>牛头酋长</another_name>
+        <another_name>牛头</another_name>
+        <another_name>阿利斯塔</another_name>
+    </hero>
+    <hero name="牧魂人">
+        <another_name>牧魂人</another_name>
+        <another_name>约里克</another_name>
+        <another_name>掘墓者</another_name>
+        <another_name>掘墓</another_name>
+    </hero>
+    <hero name="狂战士">
+        <another_name>狂战士</another_name>
+        <another_name>奥拉夫</another_name>
+    </hero>
+    <hero name="狂暴之心">
+        <another_name>狂暴之心</another_name>
+        <another_name>凯南</another_name>
+        <another_name>电老鼠</another_name>
+        <another_name>电耗子</another_name>
+    </hero>
+    <hero name="狂野女猎手">
+        <another_name>狂野女猎手</another_name>
+        <another_name>奈德丽</another_name>
+        <another_name>豹女</another_name>
+    </hero>
+    <hero name="猩红收割者">
+        <another_name>猩红收割者</another_name>
+        <another_name>弗拉基米尔</another_name>
+        <another_name>吸血鬼</another_name>
+        <another_name>吸血</another_name>
+    </hero>
+    <hero name="琴瑟仙女">
+        <another_name>琴瑟仙女</another_name>
+        <another_name>娑娜</another_name>
+        <another_name>琴女</another_name>
+    </hero>
+    <hero name="瓦洛兰之盾">
+        <another_name>瓦洛兰之盾</another_name>
+        <another_name>塔里克</another_name>
+        <another_name>宝石</another_name>
+        <another_name>宝石骑士</another_name>
+    </hero>
+    <hero name="生化魔人">
+        <another_name>生化魔人</another_name>
+        <another_name>扎克</another_name>
+        <another_name>绿巨人</another_name>
+        <another_name>翔战士</another_name>
+    </hero>
+    <hero name="疾风剑豪">
+        <another_name>疾风剑豪</another_name>
+        <another_name>亚索</another_name>
+        <another_name>托儿所</another_name>
+        <another_name>剑豪</another_name>
+    </hero>
+    <hero name="痛苦之拥">
+        <another_name>痛苦之拥</another_name>
+        <another_name>伊芙琳</another_name>
+        <another_name>寡妇</another_name>
+    </hero>
+    <hero name="瘟疫之源">
+        <another_name>瘟疫之源</another_name>
+        <another_name>图奇</another_name>
+        <another_name>老鼠</another_name>
+    </hero>
+    <hero name="皎月女神">
+        <another_name>皎月女神</another_name>
+        <another_name>黛安娜</another_name>
+        <another_name>皎月</another_name>
+    </hero>
+    <hero name="皮城女警">
+        <another_name>皮城女警</another_name>
+        <another_name>女警</another_name>
+        <another_name>凯特琳</another_name>
+    </hero>
+    <hero name="皮城执法官">
+        <another_name>皮城执法官</another_name>
+        <another_name>蔚</another_name>
+        <another_name>韦</another_name>
+        <another_name>喂</another_name>
+    </hero>
+    <hero name="盲僧">
+        <another_name>盲僧</another_name>
+        <another_name>瞎子</another_name>
+        <another_name>李青</another_name>
+    </hero>
+    <hero name="祖安怒兽">
+        <another_name>祖安怒兽</another_name>
+        <another_name>沃里克</another_name>
+        <another_name>狼人</another_name>
+    </hero>
+    <hero name="祖安狂人">
+        <another_name>祖安狂人</another_name>
+        <another_name>蒙多</another_name>
+    </hero>
+    <hero name="离群之刺">
+        <another_name>离群之刺</another_name>
+        <another_name>阿卡丽</another_name>
+        <another_name>阿卡利</another_name>
+    </hero>
+    <hero name="符文法师">
+        <another_name>符文法师</another_name>
+        <another_name>瑞兹</another_name>
+    </hero>
+    <hero name="翠神">
+        <another_name>翠神</another_name>
+        <another_name>艾翁</another_name>
+    </hero>
+    <hero name="英勇投弹手">
+        <another_name>英勇投弹手</another_name>
+        <another_name>库奇</another_name>
+        <another_name>飞机</another_name>
+    </hero>
+    <hero name="荆棘之兴">
+        <another_name>荆棘之兴</another_name>
+        <another_name>婕拉</another_name>
+    </hero>
+    <hero name="荒漠屠夫">
+        <another_name>荒漠屠夫</another_name>
+        <another_name>雷克顿</another_name>
+        <another_name>鳄鱼</another_name>
+    </hero>
+    <hero name="荣耀行刑官">
+        <another_name>荣耀行刑官</another_name>
+        <another_name>德莱文</another_name>
+        <another_name>德莱文</another_name>
+    </hero>
+    <hero name="蒸汽机器人">
+        <another_name>蒸汽机器人</another_name>
+        <another_name>别名</another_name>
+    </hero>
+    <hero name="虚空之女">
+        <another_name>虚空之女</another_name>
+        <another_name>卡莎</another_name>
+        <another_name>卡沙</another_name>
+    </hero>
+    <hero name="虚空之眼">
+        <another_name>虚空之眼</another_name>
+        <another_name>维克兹</another_name>
+        <another_name>三只眼</another_name>
+    </hero>
+    <hero name="虚空先知">
+        <another_name>虚空先知</another_name>
+        <another_name>玛尔扎哈</another_name>
+        <another_name>马尔扎哈</another_name>
+    </hero>
+    <hero name="虚空恐惧">
+        <another_name>虚空恐惧</another_name>
+        <another_name>科加斯</another_name>
+        <another_name>大虫子</another_name>
+    </hero>
+    <hero name="虚空掠夺者">
+        <another_name>虚空掠夺者</another_name>
+        <another_name>螳螂</another_name>
+        <another_name>卡兹克</another_name>
+    </hero>
+    <hero name="虚空行者">
+        <another_name>虚空行者</another_name>
+        <another_name>卡萨丁</another_name>
+    </hero>
+    <hero name="虚空遁地兽">
+        <another_name>虚空遁地兽</another_name>
+        <another_name>雷克塞</another_name>
+        <another_name>挖掘机</another_name>
+    </hero>
+    <hero name="蛮族之王">
+        <another_name>蛮族之王</another_name>
+        <another_name>泰达米尔</another_name>
+        <another_name>蛮王</another_name>
+    </hero>
+    <hero name="蜘蛛女皇">
+        <another_name>蜘蛛女皇</another_name>
+        <another_name>伊莉丝</another_name>
+        <another_name>伊利斯</another_name>
+        <another_name>蜘蛛</another_name>
+    </hero>
+    <hero name="血港鬼影">
+        <another_name>血港鬼影</another_name>
+        <another_name>派克</another_name>
+    </hero>
+    <hero name="解脱者">
+        <another_name>解脱者</another_name>
+        <another_name>塞拉斯</another_name>
+        <another_name>解脱</another_name>
+    </hero>
+    <hero name="诡术妖姬">
+        <another_name>诡术妖姬</another_name>
+        <another_name>乐芙兰</another_name>
+        <another_name>妖姬</another_name>
+    </hero>
+    <hero name="诺克萨斯之手">
+        <another_name>诺克萨斯之手</another_name>
+        <another_name>德莱厄斯</another_name>
+        <another_name>诺手</another_name>
+        <another_name>诺克</another_name>
+    </hero>
+    <hero name="诺克萨斯统领">
+        <another_name>诺克萨斯统领</another_name>
+        <another_name>斯维因</another_name>
+        <another_name>乌鸦</another_name>
+    </hero>
+    <hero name="赏金猎人">
+        <another_name>赏金猎人</another_name>
+        <another_name>厄运小姐</another_name>
+        <another_name>好运姐</another_name>
+        <another_name>赏金</another_name>
+        <another_name>女枪</another_name>
+    </hero>
+    <hero name="迅捷斥候">
+        <another_name>迅捷斥候</another_name>
+        <another_name>提莫</another_name>
+        <another_name>蘑菇</another_name>
+    </hero>
+    <hero name="远古巫灵">
+        <another_name>远古巫灵</another_name>
+        <another_name>泽拉斯</another_name>
+        <another_name>三炮</another_name>
+    </hero>
+    <hero name="迷失之牙">
+        <another_name>迷失之牙</another_name>
+        <another_name>纳尔</another_name>
+        <another_name>迷失</another_name>
+    </hero>
+    <hero name="逆羽">
+        <another_name>逆羽</another_name>
+        <another_name>霞</another_name>
+        <another_name>下</another_name>
+    </hero>
+    <hero name="邪恶小法师">
+        <another_name>邪恶小法师</another_name>
+        <another_name>维迦</another_name>
+        <another_name>小法</another_name>
+    </hero>
+    <hero name="酒桶">
+        <another_name>酒桶</another_name>
+        <another_name>古拉加斯</another_name>
+        <another_name>酒</another_name>
+    </hero>
+    <hero name="铁铠冥魂">
+        <another_name>铁铠冥魂</another_name>
+        <another_name>莫德凯撒</another_name>
+        <another_name>金属大师</another_name>
+        <another_name>铁男</another_name>
+    </hero>
+    <hero name="铸星龙王">
+        <another_name>铸星龙王</another_name>
+        <another_name>龙王</another_name>
+        <another_name>索尔</another_name>
+    </hero>
+    <hero name="雪原双子">
+        <another_name>雪原双子</another_name>
+        <another_name>努努</another_name>
+        <another_name>雪人</another_name>
+    </hero>
+    <hero name="雷霆咆哮">
+        <another_name>雷霆咆哮</another_name>
+        <another_name>沃利贝尔</another_name>
+        <another_name>狗熊</another_name>
+    </hero>
+    <hero name="青钢影">
+        <another_name>青钢影</another_name>
+        <another_name>卡蜜尔</another_name>
+        <another_name>卡米尔</another_name>
+    </hero>
+    <hero name="风暴之怒">
+        <another_name>风暴之怒</another_name>
+        <another_name>伽娜</another_name>
+        <another_name>风女</another_name>
+    </hero>
+    <hero name="魂锁典狱长">
+        <another_name>魂锁典狱长</another_name>
+        <another_name>锤石</another_name>
+        <another_name>魂</another_name>
+    </hero>
+    <hero name="魔法猫咪">
+        <another_name>魔法猫咪</another_name>
+        <another_name>猫咪</another_name>
+        <another_name>悠米</another_name>
+    </hero>
+    <hero name="麦林炮手">
+        <another_name>麦林炮手</another_name>
+        <another_name>崔丝塔娜</another_name>
+        <another_name>小炮</another_name>
+        <another_name>炮</another_name>
+    </hero>
+    <hero name="黑暗之女">
+        <another_name>黑暗之女</another_name>
+        <another_name>安妮</another_name>
+        <another_name>火女</another_name>
+    </hero>
+    <hero name="齐天大圣">
+        <another_name>齐天大圣</another_name>
+        <another_name>孙悟空</another_name>
+        <another_name>猴子</another_name>
+    </hero>
+    <hero name="龙血武姬">
+        <another_name>龙血武姬</another_name>
+        <another_name>希瓦娜</another_name>
+        <another_name>龙女</another_name>
+    </hero>
+    <hero name="魔蛇之拥">
+        <another_name>魔蛇之拥</another_name>
+        <another_name>卡西奥佩娅</another_name>
+        <another_name>蛇女</another_name>
+    </hero>
+</data>
