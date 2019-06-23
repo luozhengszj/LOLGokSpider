@@ -7,6 +7,8 @@
 
 
 class GokClass():
+    # 20190623前
+    """
     version = ''
     day = ''
     heroid = ''
@@ -25,7 +27,24 @@ class GokClass():
     mingwen = []
     first_build = []
     second_build = []
-
+    """
+    version = ''
+    day = ''
+    heroid = ''
+    heroname = ''
+    herotypename = ''
+    herotype = ''
+    tRank = ''
+    winpercent = ''
+    gameactpercnt = ''
+    banRate = ''
+    kengzhi = []
+    beikengzhi = []
+    skill = []
+    zh_skill = ''
+    mingwen = []
+    first_build = []
+    second_build = []
     def convert_to_dict(self):
         dict = {}
         dict.update(self.__dict__)

@@ -10,8 +10,9 @@ import urllib.error
 import datetime
 import ast
 import sys
+
 sys.path.append('../')
-from Config import gok_config
+from Config import gok_interface_log
 
 import time
 import requests
@@ -26,7 +27,7 @@ chrome_options.add_experimental_option('excludeSwitches',
                                        ['enable-automation'])
 prefs = {"profile.managed_default_content_settings.images": 2}
 chrome_options.add_experimental_option("prefs", prefs)
-browser = webdriver.Chrome('/home/sunny/wx/LOLGokEnv/chromedriver', chrome_options=chrome_options)
+browser = webdriver.Chrome(chrome_options=chrome_options)
 
 hero_list = []
 hero_url_list = []
@@ -116,7 +117,7 @@ def get_one_hero_detail(hero_url, gok_hero):
 all_hero_msg = []
 
 
-def get_hero_rank():
+def get_hero_rank(lu):
     retry_count = 3
     proxy = get_proxy()
     while retry_count > 0:
@@ -125,9 +126,11 @@ def get_hero_rank():
             proxies = {
                 "http": "http://" + proxy
             }
-            herohtml = requests.get(
-                url=gok_config['HERO_RANK_URL'],
-                proxies=proxies).text
+            data_tmp = gok_interface_log['post_data_20190623']
+            data_tmp.update({'position': lu})
+            herohtml = requests.post(url=gok_interface_log['post_url_20190623'],
+                                     data=data_tmp,
+                                     proxies=proxies).text
             return herohtml
         except urllib.error.URLError as e:
             if isinstance(e.reason, socket.timeout):
@@ -143,23 +146,22 @@ def get_hero_rank():
     return None
 
 
-def parse_hero_rank(rank_data, version):
+def parse_hero_rank(rank_data, version, position):
     rank_data = ast.literal_eval(rank_data)
-    hero_rank_list = str(rank_data.get('Data').get('data'))[1:-1]
+    hero_rank_list = str(rank_data.get('data').get('list'))[1:-1]
     hero_items = ast.literal_eval(hero_rank_list)
     for item in hero_items:
         gok = GokClass()
-        # gok.version = gok_config['GOK_VERSION']
         gok.version = version
         gok.day = datetime.datetime.now().strftime('%Y-%m-%d')
-        gok.heroid = item['heroid']
-        gok.heroname = item['heroname']
-        gok.herotype = item['herotype']
-        gok.herotypename = item['herotypename']
-        gok.winpercent = item['winpercent']
-        gok.gameactpercnt = item['gameactpercnt']
-        gok.mvppercnt = item['mvppercnt']
-        gok.kda = item['kda']
+        gok.heroid = item['heroId']
+        gok.heroname = item['heroInfo'][0]['heroName']
+        gok.herotype = position  # 英雄走哪路
+        gok.herotypename = item['heroInfo'][0]['heroCareer']
+        gok.tRank = item['tRank']
+        gok.winpercent = item['winRate']
+        gok.gameactpercnt = item['showRate']
+        gok.banRate = item['banRate']
         all_hero_msg.append(gok)
 
 
@@ -168,13 +170,14 @@ def get_hero_smobahelper(hero_id):
     proxy = get_proxy()
     while retry_count > 0:
         try:
-            url = gok_config['HERO_Smobahelper'] + 'heroId=' + hero_id + '&version=' + gok_config['GOK_VERSION']
             # 获取英雄列表
             proxies = {
                 "http": "http://" + proxy
             }
-            hero_smobahelper = requests.get(
-                url=url,
+            data_tmp = gok_interface_log['post_data_20190623']
+            data_tmp.update({'heroId': hero_id})
+            hero_smobahelper = requests.post(
+                url=gok_interface_log['post_smobahelper_url_20190623'],data=data_tmp,
                 proxies=proxies).text
             return hero_smobahelper
         except urllib.error.URLError as e:
@@ -192,32 +195,23 @@ def get_hero_smobahelper(hero_id):
 
 
 def parse_hero_rank_smobahelper(hero_smobahelper, hero_tmp):
-    rank_smobahelper = ast.literal_eval(hero_smobahelper)
-    hero_smobahelper_list = rank_smobahelper.get('Data')
-    items = hero_smobahelper_list.get('strongEnemy')
-    list_tmp = []
-    for item in items:
-        list_tmp.append(item)
-    hero_tmp.strongEnemy = list_tmp
-
-    list_tmp = []
-    items = hero_smobahelper_list.get('defeat')
-    for item in items:
-        list_tmp.append(item)
-    hero_tmp.defeat = list_tmp
-
-    list_tmp = []
-    items = hero_smobahelper_list.get('victory')
-    for item in items:
-        list_tmp.append(item)
-    hero_tmp.victory = list_tmp
+    rank_smobahelper = ast.literal_eval(hero_smobahelper.encode('utf-8').decode('unicode_escape').replace('/','').replace('null', "''"))
+    beikengzhi1 = rank_smobahelper.get('data').get('bkzInfo').get('list')
+    hero_tmp.beikengzhi = beikengzhi1
+    kengzhi1 = rank_smobahelper.get('data').get('kzInfo').get('list')
+    hero_tmp.kengzhi = kengzhi1
     return hero_tmp
 
 
 def main():
     hero_url_list, version = get_all_url()
-    hero_rank = get_hero_rank()
-    parse_hero_rank(hero_rank, version)
+
+    i = 1
+    for position in ['上路', '中路', '下路', '辅助', '打野']:
+        hero_rank = get_hero_rank(i)
+        parse_hero_rank(hero_rank, version, position)
+        i += 1
+
     i = 0
     for item in all_hero_msg:
         hero_smobahelper = get_hero_smobahelper(item.heroid)

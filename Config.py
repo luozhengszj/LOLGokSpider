@@ -9,6 +9,7 @@ opgg_config = {
 }
 
 mongo_config = {
+    'MONGO_URL': '127.0.0.1:27017',
     'MONGO_DB': 'opgg',
     'MONGO_TABLE': 'hero',
     'ANOTHER_NAME_TABLE': 'lol_hero_another',
@@ -28,11 +29,29 @@ web_config = {
     'HOST_PORT': '5005'
 }
 
+"""
+王者荣耀设置
+"""
 gok_config = {
     'GOK_GAME_ID': '20001',
     'GOK_VERSION': '3.1.96a',
     'APP_VERSION_NAME': '3.44.104',
 
     'HERO_RANK_URL': 'https://cgi.datamore.qq.com/datamore/smobahelper/v2/herorank',
-    'HERO_Smobahelper':'https://cgi.datamore.qq.com/datamore/smobahelper/v2/herorel?'
+    'HERO_Smobahelper':'https://cgi.datamore.qq.com/datamore/smobahelper/v2/herorel?',
+
+    'chrome_drive_path':'/home/sunny/wx/LOLGokEnv/chromedriver'
+}
+"""王者荣耀接口变更记录"""
+gok_interface_log = {
+    'post_data_20190623':{
+    'userId':'58910302',
+    'token':'tPnDNBYf',
+    'gameId':'20001',
+    'openid':'owanlsnfmzBfjurws3KxKpczmoA4',
+    'gameOpenid':'owanlsnfmzBfjurws3KxKpczmoA4',
+    'channelId':'16000168',
+    },
+    'post_url_20190623':'https://ssl.kohsocialapp.qq.com:10001/hero/getdetailranklistbyid',
+    'post_smobahelper_url_20190623':'https://ssl.kohsocialapp.qq.com:10001/hero/getheroextrainfo'
 }

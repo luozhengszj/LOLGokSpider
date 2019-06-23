@@ -103,7 +103,7 @@ def hand_lol(user_msg):
             hero_list = get_hero(hero_another_name)
             check_flag = check_msg_position(user_msg[1])
             if check_flag:
-                if len(hero_list) == 1:
+                if hero_list and len(hero_list) == 1:
                     return handle_hero_one_to_wx_msg(hero_list[0])
                 elif len(hero_list) > 1:
                     for hero in reversed(hero_list):
@@ -152,7 +152,7 @@ def handle_hero_list_to_wx_msg(hero_list):
     hero_position_win_num = '位置-胜率-登场率 ' + line_feed + line_feed
     for hero in hero_list:
         hero_position_win_num = hero_position_win_num + set_Bottom(hero['hero_position'][0]) + hero[
-                'hero_win_num'] + hero['hero_position'][1] + line_feed
+            'hero_win_num'] + hero['hero_position'][1] + line_feed
     other_msg = '来自opgg & 版本 ' + hero_list[-1]['hero_version'] + ' & 日期 ' + hero_list[-1]['day']
     back_msg = hero_name + line_feed + hero_position_win_num + line_feed + other_msg
     return back_msg
@@ -201,7 +201,7 @@ def check_msg_position(position):
 def hand_gok(user_msg):
     user_msg = user_msg.split(' ')[0]
     # hero_another_name = get_hero_name_by_another(user_msg[0])
-    if user_msg in ['射手', '辅助', '战士', '法师', '坦克', '刺客', '排行']:
+    if user_msg in ['射手', '辅助', '战士', '法师', '坦克', '刺客', '排行', '上路', '中路', '下路', '辅助', '打野']:
         # 默认胜率，取前30
         list_tmp = gok_get_herotypename(user_msg)
         return gok_handle_herotypename_to_wx_msg(list_tmp)
@@ -217,9 +217,9 @@ def hand_gok(user_msg):
 def gok_handle_hero_to_wx_msg(hero_one):
     line_feed = '\r\n'
     hero_name = hero_one['heroname'] + ' ' + hero_one['herotypename'] + line_feed + line_feed
-    hero_position_win_num = '胜率-登场率-MVP率-kda' + line_feed
-    hero_position_win_num = hero_position_win_num + hero_one['winpercent'] + '  ' + hero_one[
-        'gameactpercnt'] + '  ' + hero_one['mvppercnt'] + '  ' + hero_one['kda'] + line_feed + line_feed
+    hero_position_win_num = '热度-胜率-登场率-MVP率-禁用率' + line_feed
+    hero_position_win_num = hero_position_win_num + hero_one['tRank'] + '  ' + hero_one[
+        'winpercent'] + '  ' + hero_one['gameactpercnt'] + '  ' + hero_one['banRate'] + line_feed + line_feed
     hero_skill = str(hero_one['skill']) + line_feed
     hero_zh_skill = '召唤师技能：' + hero_one['zh_skill'] + line_feed
     hero_mingwen = '铭文：' + " ".join(hero_one['mingwen']) + line_feed + line_feed
@@ -227,36 +227,32 @@ def gok_handle_hero_to_wx_msg(hero_one):
     hero_second_build = '出装二：' + "".join(hero_one['second_build']) + line_feed + line_feed
     other_msg = '版本：' + hero_one['version'] + ' & 日期 ' + hero_one['day']
 
-    other_msg_victory_str = ''
-    if len(hero_one['victory']) > 1:
-        other_msg_victory_str = '最佳搭档：'
-        for item in hero_one['victory']:
-            other_msg_victory_str = other_msg_victory_str + item['heroexname'] + ' ' + item['winpercent'] + '，'
-
-        other_msg_victory_str = other_msg_victory_str[:-1] + line_feed
-    other_msg_defeat_str = ''
-    if len(hero_one['defeat']) > 1:
-        other_msg_defeat_str = '最坑搭档：'
-        for item in hero_one['defeat']:
-            other_msg_defeat_str = other_msg_defeat_str + item['heroexname'] + ' ' + item['winpercent'] + '，'
-        other_msg_defeat_str = other_msg_defeat_str[:-1] + line_feed
-    other_msg_strongEnemy_str = ''
-    if len(hero_one['strongEnemy']) > 1:
-        other_msg_strongEnemy_str = '被克制：'
-        for item in hero_one['strongEnemy']:
-            other_msg_strongEnemy_str = other_msg_strongEnemy_str + item['heroexname'] + ' ' + item['winpercent'] + '，'
-        other_msg_strongEnemy_str = other_msg_strongEnemy_str[:-1] + line_feed + line_feed
-    back_msg = hero_name + hero_position_win_num + hero_position_win_num + hero_skill + hero_zh_skill + hero_mingwen + hero_first_build + hero_second_build + other_msg_victory_str \
-               + other_msg_defeat_str + other_msg_strongEnemy_str + other_msg
+    other_msg_kengzhi_str = ''
+    if len(hero_one['kengzhi']) > 1:
+        other_msg_kengzhi_str = '克制：'
+        for item in hero_one['kengzhi']:
+            other_msg_kengzhi_str = other_msg_kengzhi_str + item['szTitle'] + ' ' + str(
+                float(item.get('kzParam')) * 100)[:4] + '，'
+        other_msg_kengzhi_str = other_msg_kengzhi_str[:-1] + line_feed
+    other_msg_beikezhi_str = ''
+    if len(hero_one['beikengzhi']) > 1:
+        other_msg_beikezhi_str = '被克制：'
+        for item in hero_one['beikengzhi']:
+            other_msg_beikezhi_str = other_msg_beikezhi_str + item['szTitle'] + ' ' + str(
+                float(item.get('bkzParam')) * 100)[
+                                                                                      :4] + '，'
+        other_msg_beikezhi_str = other_msg_beikezhi_str[:-1] + line_feed + line_feed
+    back_msg = hero_name + hero_position_win_num + hero_position_win_num + hero_skill + hero_zh_skill + hero_mingwen + hero_first_build + hero_second_build + other_msg_kengzhi_str \
+               + other_msg_beikezhi_str + other_msg
     return back_msg
 
 
 def gok_handle_herotypename_to_wx_msg(hero_list):
     line_feed = '\r\n'
-    msg_hero = '英雄  类型  胜率  登场率' + line_feed + line_feed
+    msg_hero = '英雄 类型 热度 胜率|登场率' + line_feed + line_feed
     for hero in hero_list:
-        msg_hero = msg_hero + hero['heroname'] + ' ' + hero['herotypename'] + ' ' + hero['winpercent'] + ' ' + hero[
-            'gameactpercnt'] + line_feed
+        msg_hero = msg_hero + hero['heroname'] + ' ' + hero['herotypename'] + ' ' + hero['tRank'] + ' ' + str(
+            float(hero.get('winpercent')) * 100)[:4] + '|' + str(float(hero.get('gameactpercnt')) * 100)[:4] + line_feed
     msg = line_feed + '版本：' + hero_list[0]['version'] + '  日期：' + hero_list[0]['day']
     return msg_hero + msg
 
@@ -303,7 +299,7 @@ if __name__ == '__main__':
     <FromUserName>12345</FromUserName>
     <CreateTime>12345678</CreateTime>
     <MsgType>盖伦</MsgType>
-    <Content>万花通灵 上</Content>
+    <Content>战士</Content>
     <MsgId>LOL</MsgId>
     </xml>
        """

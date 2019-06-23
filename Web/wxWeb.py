@@ -44,28 +44,6 @@ def get_user_msg_from_wx():
         # 返回消息数据给微信服务器
         return resp_xml_str
 
-"""
-测试接口事件
-    if (request.method == "GET"):
-        # 表示是第一次接入微信服务器的验证
-        signature = request.args.get('signature')
-        timestamp = request.args.get('timestamp')
-        nonce = request.args.get('nonce')
-        token = "luozhengwx"
-        list = [token, timestamp, nonce]
-        list.sort()
-        sha1 = hashlib.sha1()
-        sha1.update(list[0].encode('utf-8'))
-        sha1.update(list[1].encode('utf-8'))
-        sha1.update(list[2].encode('utf-8'))
-        hashcode = sha1.hexdigest()
-        echostr = request.args.get("echostr")
-        if hashcode == signature:
-            return echostr
-        else:
-            return ""
-    el
-"""
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5005)

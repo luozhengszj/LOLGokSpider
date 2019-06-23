@@ -54,14 +54,22 @@ def gok_get_herotypename(type):
     list_tmp = []
     search_set = db[mongo_config['MONGO_GOK_TABLE']]
     if type =='排行':
-        set = search_set.find({'day':yesterday.strftime('%Y-%m-%d')}).sort('winpercent', -1)
+        set = search_set.find({'day':yesterday.strftime('%Y-%m-%d')}).sort('tRank')
 
         for x in set:
             list_tmp.append(x)
         client.close()
-        return list_tmp[:30]
+        return list_tmp[:40]
+    elif type in ['射手', '辅助', '战士', '法师', '坦克', '刺客']:
+        set = search_set.find({'herotypename':type,'day': yesterday.strftime('%Y-%m-%d')}).sort('tRank')
+        for x in set:
+            list_tmp.append(x)
+        client.close()
+        if len(list_tmp) > 30:
+            return list_tmp[:30]
+        return list_tmp
     else:
-        set = search_set.find({'herotypename':type,'day': yesterday.strftime('%Y-%m-%d')}).sort('winpercent', -1)
+        set = search_set.find({'herotype': type, 'day': yesterday.strftime('%Y-%m-%d')}).sort('tRank')
         for x in set:
             list_tmp.append(x)
         client.close()
