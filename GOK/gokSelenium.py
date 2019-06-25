@@ -12,7 +12,7 @@ import ast
 import sys
 
 sys.path.append('../')
-from Config import gok_interface_log
+from Config import gok_interface_log, gok_config
 
 import time
 import requests
@@ -27,10 +27,10 @@ chrome_options.add_experimental_option('excludeSwitches',
                                        ['enable-automation'])
 prefs = {"profile.managed_default_content_settings.images": 2}
 chrome_options.add_experimental_option("prefs", prefs)
-browser = webdriver.Chrome(chrome_options=chrome_options)
+browser = webdriver.Chrome(gok_config['chrome_drive_path'], chrome_options=chrome_options)
 
 hero_list = []
-hero_url_list = []
+hero_url_list = {}
 wait = WebDriverWait(browser, 10)
 gok_version = ''
 
@@ -60,9 +60,8 @@ def get_all_url():
                 'body > div.wrapper > div > div > div.herolist-box > div.herolist-content > ul > li')
             for hero_item in all_hero_items:
                 hero_url = hero_item.find_element_by_tag_name('a').get_attribute('href')
-                hero_url_list.append(hero_url)
-                print(hero_url)
-
+                hero_url_name = hero_item.find_element_by_tag_name('img').get_attribute('alt')
+                hero_url_list.update({hero_url_name:hero_url})
             browser.get("https://pvp.qq.com/cp/a20170829bbgxsm/index.html")
             gok_version = wait.until(
                 EC.presence_of_element_located((By.CSS_SELECTOR,
@@ -153,7 +152,7 @@ def parse_hero_rank(rank_data, version, position):
     for item in hero_items:
         gok = GokClass()
         gok.version = version
-        gok.day = datetime.datetime.now().strftime('%Y-%m-%d')
+        gok.day = gok_config['GOK_INSERT_TIME']
         gok.heroid = item['heroId']
         gok.heroname = item['heroInfo'][0]['heroName']
         gok.herotype = position  # 英雄走哪路
@@ -204,6 +203,7 @@ def parse_hero_rank_smobahelper(hero_smobahelper, hero_tmp):
 
 
 def main():
+    hero_position_dict = {}
     hero_url_list, version = get_all_url()
 
     i = 1
@@ -212,17 +212,27 @@ def main():
         parse_hero_rank(hero_rank, version, position)
         i += 1
 
-    i = 0
     for item in all_hero_msg:
-        hero_smobahelper = get_hero_smobahelper(item.heroid)
-        hero_smobahelper_new = parse_hero_rank_smobahelper(hero_smobahelper, item)
-        new_hero = get_one_hero_detail(hero_url_list[i], hero_smobahelper_new)
-        gok_save_to_mongo(new_hero)
-        i += 1
+        if hero_url_list.get(item.heroname):
+            hero_smobahelper = get_hero_smobahelper(item.heroid)
+            hero_smobahelper_new = parse_hero_rank_smobahelper(hero_smobahelper, item)
+            new_hero = get_one_hero_detail(hero_url_list.get(item.heroname), hero_smobahelper_new)
+
+            if hero_position_dict.get(new_hero.heroname):
+                new_postion = hero_position_dict.get(new_hero.heroname)+' '+new_hero.herotype
+                hero_position_dict.update({item.heroname:new_postion})
+                new_hero.set_hero_type(new_postion)
+                print(new_hero.convert_to_dict())
+            else:
+                hero_position_dict.update({item.heroname:item.herotype})
+            print('hero_position_dict', str(hero_position_dict))
+            gok_save_to_mongo(new_hero)
+
 
     browser.close()
 
 
 if __name__ == '__main__':
     main()
-    browser.close()
+    if browser:
+        browser.close()

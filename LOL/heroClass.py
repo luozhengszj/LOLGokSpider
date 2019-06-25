@@ -1,5 +1,5 @@
 from enum import Enum, unique
-import datetime
+from Config import opgg_config
 
 """
 mongodb中存储的是hero 某个位置的对象对应信息：
@@ -43,7 +43,7 @@ class HeroClass:
         self.cn_name = cn_name
         self.hero_version = hero_version
         self.hero_positions = hero_positions
-        self.day = datetime.datetime.now().strftime('%Y-%m-%d')
+        self.day = opgg_config['LOL_INSERT_TIME']
 
     def __str__(self):
         return 'en_name:' + self.en_name + '  cn_name:' + self.cn_name + '  hero_positions:' + \

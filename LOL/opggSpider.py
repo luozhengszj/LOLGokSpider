@@ -79,15 +79,15 @@ def get_all_hero():
                 error_hero.append(hero_item_name)
 
             # 获取opgg英雄的tier(各位置强势英雄 ：T1 T2 T3 T4等)、胜率、登场率
-            TOP_tier_dict.update({'version':hero_item_version, 'time': datetime.datetime.now().strftime('%Y-%m-%d'), 'position':'上单'})
+            TOP_tier_dict.update({'version':hero_item_version, 'time': opgg_config['LOL_INSERT_TIME'], 'position':'上单'})
             JUG_tier_dict.update(
-                {'version': hero_item_version, 'time': datetime.datetime.now().strftime('%Y-%m-%d'), 'position': '打野'})
+                {'version': hero_item_version, 'time': opgg_config['LOL_INSERT_TIME'], 'position': '打野'})
             MID_tier_dict.update(
-                {'version': hero_item_version, 'time': datetime.datetime.now().strftime('%Y-%m-%d'), 'position': '中单'})
+                {'version': hero_item_version, 'time': opgg_config['LOL_INSERT_TIME'], 'position': '中单'})
             ADC_tier_dict.update(
-                {'version': hero_item_version, 'time': datetime.datetime.now().strftime('%Y-%m-%d'), 'position': 'Bottom'})
+                {'version': hero_item_version, 'time': opgg_config['LOL_INSERT_TIME'], 'position': 'Bottom'})
             SUP_tier_dict.update(
-                {'version': hero_item_version, 'time': datetime.datetime.now().strftime('%Y-%m-%d'), 'position': '辅助'})
+                {'version': hero_item_version, 'time': opgg_config['LOL_INSERT_TIME'], 'position': '辅助'})
             get_all_hero_tier(soup)
 
             return list_hero
@@ -358,34 +358,6 @@ def main():
             error_hero_num.append(error_num)
     print(error_hero_num)
     print(error_url)
-
-"""
-    # 出错的处理
-    print(error_hero[0])
-    hero = list_hero[-5]
-    opsition = hero.hero_positions[0]
-    hero.set_position(opsition)
-    if OPSITIONEnum(opsition) == OPSITIONEnum.TOP:
-        hero = get_hero_detail(hero, opgg_config['OPGG_HERO_OPSITION_TOP'])
-
-    elif OPSITIONEnum(opsition) == OPSITIONEnum.MID:
-        hero = get_hero_detail(hero, opgg_config['OPGG_HERO_OPSITION_MID'])
-
-    elif OPSITIONEnum(opsition) == OPSITIONEnum.JUG:
-        hero = get_hero_detail(hero, opgg_config['OPGG_HERO_OPSITION_JUG'])
-
-    elif OPSITIONEnum(opsition) == OPSITIONEnum.BOT:
-        hero = get_hero_detail(hero, opgg_config['OPGG_HERO_OPSITION_BOT'])
-    else:
-        hero = get_hero_detail(hero, opgg_config['OPGG_HERO_OPSITION_SUP'])
-
-    if hero:
-        print(hero.convert_to_dict())
-        save_to_mongo(hero)
-    else:
-        print('失败，已加入到error_list')
-"""
-
 
 if __name__ == '__main__':
     main()

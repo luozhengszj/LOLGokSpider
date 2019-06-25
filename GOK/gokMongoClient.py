@@ -2,6 +2,7 @@ import datetime
 import pymongo
 
 import sys
+
 sys.path.append('../')
 
 from Config import mongo_config
@@ -15,8 +16,10 @@ yesterday = today - datetime.timedelta(days=1)
 """
 爬取保存到MongoDB
 """
+
+
 def gok_save_to_mongo(hero):
-    if db[mongo_config['MONGO_GOK_TABLE']].insert(hero.convert_to_dict()):
+    if db[mongo_config['MONGO_GOK_TABLE']].update({'heroname': hero.heroname}, {'$set': hero.convert_to_dict()}, True):
         print('存储成功！', str(hero.convert_to_dict()))
         return True
     print('存储失败')
@@ -27,6 +30,8 @@ def gok_save_to_mongo(hero):
 """
 获取所有英雄
 """
+
+
 def gok_get_all_hero():
     search_set = db[mongo_config['MONGO_GOK_TABLE']]
     list_tmp = []
@@ -42,7 +47,7 @@ def gok_get_all_hero():
 
 def gok_get_hero(hero_name):
     search_set = db[mongo_config['MONGO_GOK_TABLE']]
-    hero_one = search_set.find_one({'heroname':hero_name, 'day':yesterday.strftime('%Y-%m-%d')})
+    hero_one = search_set.find_one({'heroname': hero_name, 'day': yesterday.strftime('%Y-%m-%d')})
 
     client.close()
     if hero_one:
@@ -50,18 +55,20 @@ def gok_get_hero(hero_name):
     else:
         return None
 
+
 def gok_get_herotypename(type):
     list_tmp = []
     search_set = db[mongo_config['MONGO_GOK_TABLE']]
-    if type =='排行':
-        set = search_set.find({'day':yesterday.strftime('%Y-%m-%d')}).sort('tRank')
+    if type == '排行':
+        set = search_set.find({'day': yesterday.strftime('%Y-%m-%d')}).sort('tRank')
 
         for x in set:
             list_tmp.append(x)
         client.close()
         return list_tmp[:40]
     elif type in ['射手', '辅助', '战士', '法师', '坦克', '刺客']:
-        set = search_set.find({'herotypename':type,'day': yesterday.strftime('%Y-%m-%d')}).sort('tRank')
+        set = search_set.find({'$or': [{'herotypename': {'$regex': type}}, {'herotype': {'$regex': type}}],
+                               'day': yesterday.strftime('%Y-%m-%d')}).sort([('tRank', 1), ('winpercent', -1)])
         for x in set:
             list_tmp.append(x)
         client.close()
@@ -69,11 +76,11 @@ def gok_get_herotypename(type):
             return list_tmp[:30]
         return list_tmp
     else:
-        set = search_set.find({'herotype': type, 'day': yesterday.strftime('%Y-%m-%d')}).sort('tRank')
+        set = search_set.find({'herotype': {'$regex': '.*' + type + '.*'}, 'day': yesterday.strftime('%Y-%m-%d')}).sort(
+            'tRank')
         for x in set:
             list_tmp.append(x)
         client.close()
         if len(list_tmp) > 30:
             return list_tmp[:30]
         return list_tmp
-

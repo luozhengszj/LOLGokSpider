@@ -63,7 +63,7 @@ def hand_text_msg(xml_dict):
                 back_msg = """切换 LOL 成功\r\n\r\n输入【排行 位置】查询位置英雄排行\r\n\r\n如【排行 上】可查看上路强势英雄\r\n\r\n输入【英雄名】查询英雄情况\r\n\r\n输入【英雄名 位置】查询英雄该位置玩法"""
 
             elif user_content in gok_game:
-                back_msg = """切换 王者荣耀 成功\r\n\r\n输入【排行】查询前30英雄胜率\r\n\r\n如【类型】可查看类型强势英雄\r\n\r\n如输入【坦克】查询胜率前30坦克英雄\r\n\r\n可输入英雄名、刺客、坦克、射手、法师、辅助、排行"""
+                back_msg = """切换 王者荣耀 成功\r\n\r\n输入【排行】查询前30英雄胜率\r\n\r\n如【类型】可查看类型强势英雄\r\n\r\n如输入【坦克】查询胜率前30坦克英雄\r\n\r\n可输入英雄名、刺客、坦克、射手、法师、辅助、排行、上路、下路、中路、辅助、打野"""
             else:
                 back_msg = """初次使用，请先确定类型\r\n\r\n请输入【王者荣耀】或【LOL】"""
 
@@ -148,13 +148,18 @@ def handle_hero_one_to_wx_msg(hero):
 
 def handle_hero_list_to_wx_msg(hero_list):
     line_feed = '\r\n'
-    hero_name = hero_list[-1]['cn_name']
-    hero_position_win_num = '位置-胜率-登场率 ' + line_feed + line_feed
-    for hero in hero_list:
-        hero_position_win_num = hero_position_win_num + set_Bottom(hero['hero_position'][0]) + hero[
-            'hero_win_num'] + hero['hero_position'][1] + line_feed
-    other_msg = '来自opgg & 版本 ' + hero_list[-1]['hero_version'] + ' & 日期 ' + hero_list[-1]['day']
-    back_msg = hero_name + line_feed + hero_position_win_num + line_feed + other_msg
+    back_msg = ''
+    if hero_list:
+        hero_name = hero_list[-1]['cn_name']
+        hero_position_win_num = '位置-胜率-登场率 ' + line_feed + line_feed
+        for hero in hero_list:
+            hero_position_win_num = hero_position_win_num + set_Bottom(hero['hero_position'][0]) + hero[
+                'hero_win_num'] + hero['hero_position'][1] + line_feed
+        other_msg = '来自opgg & 版本 ' + hero_list[-1]['hero_version'] + ' & 日期 ' + hero_list[-1]['day']
+        back_msg = hero_name + line_feed + hero_position_win_num + line_feed + other_msg
+
+    else:
+        back_msg = '数据确实'
     return back_msg
 
 
@@ -242,19 +247,21 @@ def gok_handle_hero_to_wx_msg(hero_one):
                 float(item.get('bkzParam')) * 100)[
                                                                                       :4] + '，'
         other_msg_beikezhi_str = other_msg_beikezhi_str[:-1] + line_feed + line_feed
-    back_msg = hero_name + hero_position_win_num + hero_position_win_num + hero_skill + hero_zh_skill + hero_mingwen + hero_first_build + hero_second_build + other_msg_kengzhi_str \
+    back_msg = hero_name + hero_position_win_num + hero_skill + hero_zh_skill + hero_mingwen + hero_first_build + hero_second_build + other_msg_kengzhi_str \
                + other_msg_beikezhi_str + other_msg
     return back_msg
 
 
 def gok_handle_herotypename_to_wx_msg(hero_list):
     line_feed = '\r\n'
-    msg_hero = '英雄 类型 热度 胜率|登场率' + line_feed + line_feed
-    for hero in hero_list:
-        msg_hero = msg_hero + hero['heroname'] + ' ' + hero['herotypename'] + ' ' + hero['tRank'] + ' ' + str(
-            float(hero.get('winpercent')) * 100)[:4] + '|' + str(float(hero.get('gameactpercnt')) * 100)[:4] + line_feed
-    msg = line_feed + '版本：' + hero_list[0]['version'] + '  日期：' + hero_list[0]['day']
-    return msg_hero + msg
+    if hero_list:
+        msg_hero = '英雄 类型 热度 胜率|登场率' + line_feed + line_feed
+        for hero in hero_list:
+            msg_hero = msg_hero + hero['heroname'] + ' ' + hero['herotypename'] + ' ' + hero['tRank'] + ' ' + str(
+                float(hero.get('winpercent')) * 100)[:4] + '|' + str(float(hero.get('gameactpercnt')) * 100)[:4] + line_feed
+        msg = line_feed + '版本：' + hero_list[0]['version'] + '  日期：' + hero_list[0]['day']
+        return msg_hero + msg
+    return 'error'
 
 
 # make Chinese text clean
@@ -277,7 +284,7 @@ def gokshuoming():
     line_feed = '\r\n'
     back_msg = '订阅号可查询LOL、王者荣耀英雄数据' + line_feed + line_feed + '初次使用及切换查询需要输入【LOL】或【王者荣耀】' \
                + line_feed + line_feed + '王者荣耀 说明 ' + line_feed + '输入【英雄名】查看详细攻略' \
-               + line_feed + '输入【胜率】或【类型】查看胜率前30英雄' + line_feed + '如【胜率】、【坦克】、【刺客】、【射手】、【辅助】、【法师】' \
+               + line_feed + '输入【胜率】、【类型】、【位置】查看胜率前30英雄' + line_feed + '如【胜率】、【坦克】、【刺客】、【射手】、【辅助】、【法师】、【上路】、【下路】等' \
                + line_feed + '王者数据来自官网' + line_feed + line_feed + '欢迎到到个人网站:richule.com 交流'
     return back_msg
 
@@ -299,7 +306,7 @@ if __name__ == '__main__':
     <FromUserName>12345</FromUserName>
     <CreateTime>12345678</CreateTime>
     <MsgType>盖伦</MsgType>
-    <Content>战士</Content>
+    <Content>辅助</Content>
     <MsgId>LOL</MsgId>
     </xml>
        """

@@ -45,6 +45,9 @@ class GokClass():
     mingwen = []
     first_build = []
     second_build = []
+
+    def set_hero_type(self, type):
+        self.herotype = type
     def convert_to_dict(self):
         dict = {}
         dict.update(self.__dict__)

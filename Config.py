@@ -1,3 +1,5 @@
+import datetime
+
 opgg_config = {
     'OPGG_MAIN_URL': 'http://www.op.gg/champion/statistics',
     'OPGG_HERO_URL': 'http://www.op.gg/champion/',
@@ -6,6 +8,8 @@ opgg_config = {
     'OPGG_HERO_OPSITION_SUP': '/statistics/support',
     'OPGG_HERO_OPSITION_BOT': '/statistics/bot',
     'OPGG_HERO_OPSITION_JUG': '/statistics/jungle',
+    #'LOL_INSERT_TIME': '2019-06-23',
+    'LOL_INSERT_TIME':datetime.datetime.now().strftime('%Y-%m-%d')
 }
 
 mongo_config = {
@@ -40,7 +44,10 @@ gok_config = {
     'HERO_RANK_URL': 'https://cgi.datamore.qq.com/datamore/smobahelper/v2/herorank',
     'HERO_Smobahelper':'https://cgi.datamore.qq.com/datamore/smobahelper/v2/herorel?',
 
-    'chrome_drive_path':'/home/sunny/wx/LOLGokEnv/chromedriver'
+    'chrome_drive_path':'/home/sunny/wx/LOLGokEnv/chromedriver',
+
+    'GOK_INSERT_TIME': '2019-06-24',
+    #'GOK_INSERT_TIME':datetime.datetime.now().strftime('%Y-%m-%d')
 }
 """王者荣耀接口变更记录"""
 gok_interface_log = {
