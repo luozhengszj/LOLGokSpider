@@ -222,7 +222,7 @@ def hand_gok(user_msg):
 def gok_handle_hero_to_wx_msg(hero_one):
     line_feed = '\r\n'
     hero_name = hero_one['heroname'] + ' ' + hero_one['herotypename'] + line_feed + line_feed
-    hero_position_win_num = '热度-胜率-登场率-MVP率-禁用率' + line_feed
+    hero_position_win_num = '热度-胜率-登场率-禁用率' + line_feed
     hero_position_win_num = hero_position_win_num + hero_one['tRank'] + '  ' + hero_one[
         'winpercent'] + '  ' + hero_one['gameactpercnt'] + '  ' + hero_one['banRate'] + line_feed + line_feed
     hero_skill = str(hero_one['skill']) + line_feed
@@ -230,7 +230,7 @@ def gok_handle_hero_to_wx_msg(hero_one):
     hero_mingwen = '铭文：' + " ".join(hero_one['mingwen']) + line_feed + line_feed
     hero_first_build = '出装一：' + "".join(hero_one['first_build']) + line_feed
     hero_second_build = '出装二：' + "".join(hero_one['second_build']) + line_feed + line_feed
-    other_msg = '版本：' + hero_one['version'] + ' & 日期 ' + hero_one['day']
+    other_msg = '版本：' + hero_one['version'] + ' & ' + hero_one['day']
 
     other_msg_kengzhi_str = ''
     if len(hero_one['kengzhi']) > 1:

@@ -19,7 +19,7 @@ yesterday = today - datetime.timedelta(days=1)
 
 
 def gok_save_to_mongo(hero):
-    if db[mongo_config['MONGO_GOK_TABLE']].update({'heroname': hero.heroname}, {'$set': hero.convert_to_dict()}, True):
+    if db[mongo_config['MONGO_GOK_TABLE']].update({'heroname': hero.heroname, 'day': datetime.datetime.now().strftime('%Y-%m-%d')}, {'$set': hero.convert_to_dict()}, True):
         print('存储成功！', str(hero.convert_to_dict()))
         return True
     print('存储失败')
