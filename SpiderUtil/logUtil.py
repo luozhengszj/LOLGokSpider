@@ -1,3 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name：     logUtil.py
+   Author :        Luozheng
+   date：          2019/6/28
+-------------------------------------------------
+   Change Activity:
+                   2019/6/28:
+-------------------------------------------------
+Description :
+日志Log的记录工具类
+"""
+__author__ = 'Luozheng'
+
 import logging
 from logging import handlers
 
@@ -34,8 +49,8 @@ class Logger(object):
 
 
 if __name__ == '__main__':
-    log = Logger('all.log', level='debug')
-    log.logger.debug('debug')
+    log = Logger('../Log/logUtil.log', level='debug')
+    log.logger.debug('存储失败！')
     log.logger.info('info')
     log.logger.warning('警告')
     log.logger.error('报错')

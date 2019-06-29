@@ -1,3 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name：     gokMongoClient.py
+   Author :        Luozheng
+   date：          2019/6/28
+-------------------------------------------------
+   Change Activity:
+                   2019/6/28:
+-------------------------------------------------
+Description :
+王者荣耀操作mongo数据库的操作模块
+
+"""
+__author__ = 'Luozheng'
+
 import datetime
 import pymongo
 
@@ -6,12 +22,15 @@ import sys
 sys.path.append('../')
 
 from Config import mongo_config
+from SpiderUtil.logUtil import Logger
 
 client = pymongo.MongoClient(mongo_config['MONGO_URL'])
 db = client[mongo_config['MONGO_DB']]
 
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
+
+log = Logger('../Log/gokMongoClient.log', level='debug')
 
 """
 爬取保存到MongoDB
@@ -20,9 +39,9 @@ yesterday = today - datetime.timedelta(days=1)
 
 def gok_save_to_mongo(hero):
     if db[mongo_config['MONGO_GOK_TABLE']].update({'heroname': hero.heroname, 'day': datetime.datetime.now().strftime('%Y-%m-%d')}, {'$set': hero.convert_to_dict()}, True):
-        print('存储成功！', str(hero.convert_to_dict()))
+        log.logger.debug('存储成功！'+str(hero.heroname))
         return True
-    print('存储失败')
+    log.logger.error('存储失败！'+str(hero.heroname))
     client.close()
     return False
 

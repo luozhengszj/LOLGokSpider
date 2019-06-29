@@ -3,7 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="77b1e6ba-d6e7-428e-9e82-d687076def69" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Config.py" afterPath="$PROJECT_DIR$/Config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GOK/__init__.py" afterPath="$PROJECT_DIR$/GOK/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GOK/gokClass.py" afterPath="$PROJECT_DIR$/GOK/gokClass.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GOK/gokMongoClient.py" afterPath="$PROJECT_DIR$/GOK/gokMongoClient.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GOK/gokSelenium.py" afterPath="$PROJECT_DIR$/GOK/gokSelenium.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LOL/__init__.py" afterPath="$PROJECT_DIR$/LOL/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LOL/heroClass.py" afterPath="$PROJECT_DIR$/LOL/heroClass.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LOL/lolMongoClient.py" afterPath="$PROJECT_DIR$/LOL/lolMongoClient.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LOL/opggSpider.py" afterPath="$PROJECT_DIR$/LOL/opggSpider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MongoClient.py" afterPath="$PROJECT_DIR$/MongoClient.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Run.py" afterPath="$PROJECT_DIR$/Run.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpiderUtil/__init__.py" afterPath="$PROJECT_DIR$/SpiderUtil/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpiderUtil/logUtil.py" afterPath="$PROJECT_DIR$/SpiderUtil/logUtil.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpiderUtil/wxMsgUtil.py" afterPath="$PROJECT_DIR$/SpiderUtil/wxMsgUtil.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpiderUtil/xmlUtil.py" afterPath="$PROJECT_DIR$/SpiderUtil/xmlUtil.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/test.py" afterPath="$PROJECT_DIR$/Test/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/__init__.py" afterPath="$PROJECT_DIR$/Web/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web/wxWeb.py" afterPath="$PROJECT_DIR$/Web/wxWeb.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,37 +34,38 @@
     <SUITE FILE_PATH="coverage/LOLGokSpider$test3.coverage" NAME="test3 Coverage Results" MODIFIED="1561267585709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$xmlUtil__1_.coverage" NAME="xmlUtil (1) Coverage Results" MODIFIED="1561092671598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpiderUtil" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$gokSpider.coverage" NAME="gokSpider Coverage Results" MODIFIED="1561028647938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GOK" />
-    <SUITE FILE_PATH="coverage/LOLGokSpider$opggSpider.coverage" NAME="opggSpider Coverage Results" MODIFIED="1561346320880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOL" />
+    <SUITE FILE_PATH="coverage/LOLGokSpider$opggSpider.coverage" NAME="opggSpider Coverage Results" MODIFIED="1561779823688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOL" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$heroClass.coverage" NAME="heroClass Coverage Results" MODIFIED="1560442244967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOL" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$gokMongoClient.coverage" NAME="gokMongoClient Coverage Results" MODIFIED="1561464452229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GOK" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$test.coverage" NAME="test Coverage Results" MODIFIED="1561463167220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$mongodb.coverage" NAME="mongodb Coverage Results" MODIFIED="1560435422889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOL" />
+    <SUITE FILE_PATH="coverage/LOLGokSpider$logUtil.coverage" NAME="logUtil Coverage Results" MODIFIED="1561777425946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpiderUtil" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$mongoXml.coverage" NAME="mongoXml Coverage Results" MODIFIED="1560514272430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XmlInfo" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$wxWeb.coverage" NAME="wxWeb Coverage Results" MODIFIED="1560567834103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Web" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$Run.coverage" NAME="Run Coverage Results" MODIFIED="1561134281057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$Opgg.coverage" NAME="Opgg Coverage Results" MODIFIED="1560261348414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOL" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$wxUtil.coverage" NAME="wxUtil Coverage Results" MODIFIED="1560944452524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpiderUtil" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$opgg.coverage" NAME="opgg Coverage Results" MODIFIED="1560487354739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOL" />
-    <SUITE FILE_PATH="coverage/LOLGokSpider$gokSelenium.coverage" NAME="gokSelenium Coverage Results" MODIFIED="1561559526942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GOK" />
+    <SUITE FILE_PATH="coverage/LOLGokSpider$gokSelenium.coverage" NAME="gokSelenium Coverage Results" MODIFIED="1561780149344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GOK" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$xmlUtil.coverage" NAME="xmlUtil Coverage Results" MODIFIED="1561092877479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpiderUtil" />
-    <SUITE FILE_PATH="coverage/LOLGokSpider$wxMsgUtil.coverage" NAME="wxMsgUtil Coverage Results" MODIFIED="1561464455819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpiderUtil" />
+    <SUITE FILE_PATH="coverage/LOLGokSpider$wxMsgUtil.coverage" NAME="wxMsgUtil Coverage Results" MODIFIED="1561775380620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpiderUtil" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1561270468814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$writeXml.coverage" NAME="writeXml Coverage Results" MODIFIED="1560504108857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/XmlInfo" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$mongoClient.coverage" NAME="mongoClient Coverage Results" MODIFIED="1561082152160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOL" />
-    <SUITE FILE_PATH="coverage/LOLGokSpider$lolMongoClient.coverage" NAME="lolMongoClient Coverage Results" MODIFIED="1561172709940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOL" />
+    <SUITE FILE_PATH="coverage/LOLGokSpider$lolMongoClient.coverage" NAME="lolMongoClient Coverage Results" MODIFIED="1561779827721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LOL" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$gokClass.coverage" NAME="gokClass Coverage Results" MODIFIED="1560952849247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GOK" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$OpggApi.coverage" NAME="OpggApi Coverage Results" MODIFIED="1560514909842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Web" />
     <SUITE FILE_PATH="coverage/LOLGokSpider$Config.coverage" NAME="Config Coverage Results" MODIFIED="1560689234502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="wxMsgUtil.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpiderUtil/wxMsgUtil.py">
+      <file leaf-file-name="gokSelenium.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GOK/gokSelenium.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3706">
-              <caret line="224" column="55" lean-forward="false" selection-start-line="224" selection-start-column="55" selection-end-line="224" selection-end-column="55" />
+            <state relative-caret-position="306">
+              <caret line="48" column="60" lean-forward="false" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#392#422#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,28 +74,18 @@
       <file leaf-file-name="Config.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state relative-caret-position="136">
+              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="MongoClient.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MongoClient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gokSelenium.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GOK/gokSelenium.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="90" column="47" lean-forward="false" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
+            <state relative-caret-position="986">
+              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,17 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>-14</find>
-      <find>find_rank</find>
-      <find>parse_hero_rank_smobahelper</find>
-      <find>heroname': '哪吒</find>
-      <find>51.84</find>
-      <find>get_one_hero_detail</find>
-      <find>可尝试【排行 上路】</find>
-      <find>lol_find_rank</find>
-      <find>handle_hero_rank_to_wx_msg</find>
-      <find>gok_handle_herotypename_to_wx_msg</find>
-      <find>gok_save_to_mongo</find>
       <find>gok_handle_hero_to_wx_msg</find>
       <find>gok_get_hero</find>
       <find>gok_get_herotypename</find>
@@ -118,12 +115,23 @@
       <find>get_hero_smobahelper</find>
       <find>2019</find>
       <find>06-23</find>
-      <find>print</find>
       <find>猪八戒</find>
       <find>hero_position_win_num</find>
       <find>heronamed</find>
       <find>now</find>
       <find>float</find>
+      <find>check_msg_position</find>
+      <find>get_hero_name_by_another</find>
+      <find>排行</find>
+      <find>pri</find>
+      <find>print</find>
+      <find>存储</find>
+      <find>06-24</find>
+      <find>庄周</find>
+      <find>24</find>
+      <find>day</find>
+      <find>GOK_INSERT_TIME</find>
+      <find>log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -132,8 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LOL/Opgg.py" />
-        <option value="$PROJECT_DIR$/LOL/Hero.py" />
         <option value="$PROJECT_DIR$/LOL/hero.py" />
         <option value="$PROJECT_DIR$/LOL/herohtml.py" />
         <option value="$PROJECT_DIR$/LOL/mongodb.py" />
@@ -154,8 +160,6 @@
         <option value="$PROJECT_DIR$/Test/wxTest.py" />
         <option value="$PROJECT_DIR$/Util/wxUtil.py" />
         <option value="$PROJECT_DIR$/Util/__init__.py" />
-        <option value="$PROJECT_DIR$/LOL/__init__.py" />
-        <option value="$PROJECT_DIR$/Web/__init__.py" />
         <option value="$PROJECT_DIR$/Web/OpggApi.py" />
         <option value="$PROJECT_DIR$/GOK/gokSpider.py" />
         <option value="$PROJECT_DIR$/SpiderUtil/hero_another_name.xml" />
@@ -163,25 +167,29 @@
         <option value="$PROJECT_DIR$/LOL/mongoClient.py" />
         <option value="$PROJECT_DIR$/GOK/mongoClient.py" />
         <option value="$PROJECT_DIR$/SpiderUtil/wxUtil.py" />
-        <option value="$PROJECT_DIR$/SpiderUtil/xmlUtil.py" />
         <option value="$PROJECT_DIR$/Web/wxMsgUtil.py" />
-        <option value="$PROJECT_DIR$/Run.py" />
-        <option value="$PROJECT_DIR$/MongoClient.py" />
-        <option value="$PROJECT_DIR$/SpiderUtil/logUtil.py" />
-        <option value="$PROJECT_DIR$/LOL/lolMongoClient.py" />
         <option value="$PROJECT_DIR$/Test/aa.json" />
         <option value="$PROJECT_DIR$/Test/11.json" />
         <option value="$PROJECT_DIR$/Test/test3.py" />
         <option value="$PROJECT_DIR$/Test/test2.py" />
-        <option value="$PROJECT_DIR$/Web/wxWeb.py" />
-        <option value="$PROJECT_DIR$/LOL/heroClass.py" />
-        <option value="$PROJECT_DIR$/LOL/opggSpider.py" />
-        <option value="$PROJECT_DIR$/GOK/gokClass.py" />
-        <option value="$PROJECT_DIR$/Test/test.py" />
-        <option value="$PROJECT_DIR$/GOK/gokSelenium.py" />
-        <option value="$PROJECT_DIR$/GOK/gokMongoClient.py" />
-        <option value="$PROJECT_DIR$/SpiderUtil/wxMsgUtil.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/GOK/gokClass.py" />
+        <option value="$PROJECT_DIR$/GOK/__init__.py" />
+        <option value="$PROJECT_DIR$/LOL/__init__.py" />
+        <option value="$PROJECT_DIR$/SpiderUtil/__init__.py" />
+        <option value="$PROJECT_DIR$/Test/test.py" />
+        <option value="$PROJECT_DIR$/SpiderUtil/xmlUtil.py" />
+        <option value="$PROJECT_DIR$/LOL/heroClass.py" />
+        <option value="$PROJECT_DIR$/Web/__init__.py" />
+        <option value="$PROJECT_DIR$/Web/wxWeb.py" />
+        <option value="$PROJECT_DIR$/Run.py" />
+        <option value="$PROJECT_DIR$/SpiderUtil/logUtil.py" />
+        <option value="$PROJECT_DIR$/SpiderUtil/wxMsgUtil.py" />
+        <option value="$PROJECT_DIR$/MongoClient.py" />
+        <option value="$PROJECT_DIR$/LOL/opggSpider.py" />
+        <option value="$PROJECT_DIR$/LOL/lolMongoClient.py" />
+        <option value="$PROJECT_DIR$/GOK/gokMongoClient.py" />
+        <option value="$PROJECT_DIR$/GOK/gokSelenium.py" />
         <option value="$PROJECT_DIR$/Config.py" />
       </list>
     </option>
@@ -213,6 +221,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -250,7 +259,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,24 +294,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.gokSelenium">
-    <configuration name="gokMongoClient" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GOK" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="LOLGokSpider" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GOK/gokMongoClient.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="gokSelenium" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -322,6 +312,42 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="logUtil" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SpiderUtil" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LOLGokSpider" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SpiderUtil/logUtil.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="lolMongoClient" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LOL" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LOLGokSpider" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LOL/lolMongoClient.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="opggSpider" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -336,24 +362,6 @@
       <module name="LOLGokSpider" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LOL/opggSpider.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="LOLGokSpider" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -379,17 +387,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.gokSelenium" />
       <item index="1" class="java.lang.String" itemvalue="Python.wxMsgUtil" />
-      <item index="2" class="java.lang.String" itemvalue="Python.opggSpider" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.gokMongoClient" />
+      <item index="2" class="java.lang.String" itemvalue="Python.logUtil" />
+      <item index="3" class="java.lang.String" itemvalue="Python.opggSpider" />
+      <item index="4" class="java.lang.String" itemvalue="Python.lolMongoClient" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.gokSelenium" />
-        <item index="1" class="java.lang.String" itemvalue="Python.wxMsgUtil" />
-        <item index="2" class="java.lang.String" itemvalue="Python.gokMongoClient" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.opggSpider" />
+        <item index="1" class="java.lang.String" itemvalue="Python.lolMongoClient" />
+        <item index="2" class="java.lang.String" itemvalue="Python.opggSpider" />
+        <item index="3" class="java.lang.String" itemvalue="Python.logUtil" />
+        <item index="4" class="java.lang.String" itemvalue="Python.wxMsgUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -419,11 +427,11 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.353125" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2953125" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937598" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3984375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -442,52 +450,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LOL/opggSpider.py</url>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LOL/heroClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LOL/opggSpider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LOL/heroClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LOL/herohtml.py" />
     <entry file="file://$PROJECT_DIR$/LOL/opggSpider.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -545,33 +512,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Util/hero_another_name_beifen.xml" />
     <entry file="file://$PROJECT_DIR$/XmlInfo/mongoXml.py" />
-    <entry file="file://$PROJECT_DIR$/Web/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpiderUtil/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/OpggApi.py" />
     <entry file="file://$PROJECT_DIR$/SpiderUtil/hero_another_name.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="50" column="11" lean-forward="true" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpiderUtil/gok_hero_another_name.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -585,43 +530,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GOK/gokSpider.py" />
     <entry file="file://$PROJECT_DIR$/SpiderUtil/wxUtil.py" />
-    <entry file="file://$PROJECT_DIR$/SpiderUtil/xmlUtil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GOK/ghostdriver.log" />
-    <entry file="file://$PROJECT_DIR$/GOK/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Run.log" />
-    <entry file="file://$PROJECT_DIR$/Run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpiderUtil/logUtil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="52" lean-forward="false" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LOL/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/ast.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -633,93 +543,220 @@
     <entry file="file://$PROJECT_DIR$/Test/11.json" />
     <entry file="file://$PROJECT_DIR$/Test/test3.py" />
     <entry file="file://$PROJECT_DIR$/Test/test2.py" />
-    <entry file="file://$PROJECT_DIR$/LOL/lolMongoClient.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="136" column="42" lean-forward="false" selection-start-line="136" selection-start-column="38" selection-end-line="136" selection-end-column="42" />
+        <state relative-caret-position="663">
+          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MongoClient.py">
+    <entry file="file://$PROJECT_DIR$/SpiderUtil/gok_hero_another_name.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="41" column="3" lean-forward="true" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+        <state relative-caret-position="782">
+          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpiderUtil/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LOL/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web/wxWeb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#380#390#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LOL/heroClass.py">
+    <entry file="file://$PROJECT_DIR$/Run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#357#401#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/all.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GOK/gokClass.py">
+    <entry file="file://$PROJECT_DIR$/GOK/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        <state relative-caret-position="153">
+          <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LOL/opggSpider.py">
+    <entry file="file://$PROJECT_DIR$/Log/logUtil.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5780">
-          <caret line="357" column="17" lean-forward="false" selection-start-line="357" selection-start-column="17" selection-end-line="357" selection-end-column="17" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpiderUtil/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpiderUtil/logUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="52" column="28" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+          <folding>
+            <element signature="e#368#382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpiderUtil/wxMsgUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="335" column="4" lean-forward="true" selection-start-line="335" selection-start-column="4" selection-end-line="335" selection-end-column="19" />
+          <folding>
+            <element signature="e#399#408#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpiderUtil/xmlUtil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="64" column="11" lean-forward="false" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/opggSpider.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Log/lolMongoClient.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LOL/heroClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="56" column="20" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="20" />
+          <folding>
+            <element signature="e#758#787#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GOK/gokClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="44" column="12" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LOL/lolMongoClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="88" column="51" lean-forward="false" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="51" />
+          <folding>
+            <element signature="e#379#393#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GOK/gokMongoClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="21" column="127" lean-forward="false" selection-start-line="21" selection-start-column="127" selection-end-line="21" selection-end-column="127" />
+        <state relative-caret-position="217">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#384#399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LOL/opggSpider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="121" column="42" lean-forward="false" selection-start-line="121" selection-start-column="42" selection-end-line="121" selection-end-column="42" />
+          <folding>
+            <element signature="e#372#381#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GOK/gokSelenium.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="90" column="47" lean-forward="false" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpiderUtil/wxMsgUtil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3706">
-          <caret line="224" column="55" lean-forward="false" selection-start-line="224" selection-start-column="55" selection-end-line="224" selection-end-column="55" />
+        <state relative-caret-position="306">
+          <caret line="48" column="60" lean-forward="false" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#392#422#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/MongoClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="986">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        <state relative-caret-position="136">
+          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding />
         </state>
       </provider>

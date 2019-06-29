@@ -1,13 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name：     MonogoClient.py
+   Author :        Luozheng
+   date：          2019/6/28
+-------------------------------------------------
+   Change Activity:
+                   2019/6/28:
+-------------------------------------------------
+Description :
+全局mongo的操作模块
+"""
+__author__ = 'Luozheng'
+
 import pymongo
 
 import sys
+
 sys.path.append('../')
 
 from Config import mongo_config
+from SpiderUtil.logUtil import Logger
+
+log = Logger('../Log/MongoClient.log', level='debug')
 
 client = pymongo.MongoClient(mongo_config['MONGO_URL'])
 db = client[mongo_config['MONGO_DB']]
-
 
 
 def user_find_type(user_id):
@@ -44,9 +62,7 @@ def update_user_find_type(user_id, type):
 
 def save_follower_to_mongo(follower_msg):
     if db[mongo_config['FOLLOWERS_TABLE']].insert(follower_msg):
-        print('存储成功！', str(follower_msg))
+        log.logger.debug('存储成功！' + str(follower_msg))
         return True
-    print('存储失败')
+    log.logger.debug('存储失败！' + str(follower_msg))
     return False
-
-

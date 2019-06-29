@@ -1,17 +1,35 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name：     opggSpider.py
+   Author :        Luozheng
+   date：          2019/6/28
+-------------------------------------------------
+   Change Activity:
+                   2019/6/28:
+-------------------------------------------------
+Description :
+爬取lol数据的主要实现
+"""
+__author__ = 'Luozheng'
+
 import re
 import socket
 import urllib.error
-import datetime
 
 import requests
 from bs4 import BeautifulSoup
 
 import sys
+
 sys.path.append('../')
 
 from Config import opgg_config
 from LOL.heroClass import HeroClass, OPSITIONEnum
 from LOL.lolMongoClient import save_to_mongo, save_rank
+from SpiderUtil.logUtil import Logger
+
+log = Logger('../Log/opggSpider.log', level='debug')
 
 headers = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
@@ -55,7 +73,8 @@ def get_all_hero():
             proxies = {
                 "http": "http://" + proxy
             }
-            herohtml = requests.get(url=opgg_config['OPGG_MAIN_URL'], proxies=proxies, headers=headers, timeout=120).text
+            herohtml = requests.get(url=opgg_config['OPGG_MAIN_URL'], proxies=proxies, headers=headers,
+                                    timeout=120).text
             # 存储所有英雄的hero对象
             list_hero = []
             soup = BeautifulSoup(herohtml, 'lxml')
@@ -79,7 +98,8 @@ def get_all_hero():
                 error_hero.append(hero_item_name)
 
             # 获取opgg英雄的tier(各位置强势英雄 ：T1 T2 T3 T4等)、胜率、登场率
-            TOP_tier_dict.update({'version':hero_item_version, 'time': opgg_config['LOL_INSERT_TIME'], 'position':'上单'})
+            TOP_tier_dict.update(
+                {'version': hero_item_version, 'time': opgg_config['LOL_INSERT_TIME'], 'position': '上单'})
             JUG_tier_dict.update(
                 {'version': hero_item_version, 'time': opgg_config['LOL_INSERT_TIME'], 'position': '打野'})
             MID_tier_dict.update(
@@ -93,24 +113,23 @@ def get_all_hero():
             return list_hero
         except urllib.error.URLError as e:
             if isinstance(e.reason, socket.timeout):
-                print(proxy + ' timeout')
                 retry_count -= 1
                 if retry_count == 2:
                     # 出错3次, 删除代理池中代理
                     delete_proxy(proxy)
                     proxy = get_proxy()
-                    """
         except Exception as e:
-            print(str(e))
+            log.logger.error('get_all_hero爬取失败！' + str(e))
             retry_count -= 1
-            """
+            if retry_count == 3:
+                delete_proxy(proxy)
+                proxy = get_proxy()
     return None
 
 
 # 获取opgg英雄的tier(各位置强势英雄 ：T1 T2 T3 T4等)
 # 获取opgg英雄胜率、登场率
 def get_all_hero_tier(soup):
-
     hero_top_tier_tbody = soup.select('[class~=champion-trend-tier-TOP] > tr')
     for hero_top_tier_tbody_item in hero_top_tier_tbody:
         hero_iter_name = hero_top_tier_tbody_item.find(class_='champion-index-table__name').text
@@ -119,8 +138,7 @@ def get_all_hero_tier(soup):
         hero_iter_num = 'T' + re.search('icon-champtier-(.*)?\.png', hero_top_tier_tbody_item.select('img')[1]['src'],
                                         re.S).group(1)
 
-        TOP_tier_dict.update({hero_iter_name:hero_iter_num + ' ' + hero_iter_win + ' ' + hero_iter_stage})
-    print(TOP_tier_dict)
+        TOP_tier_dict.update({hero_iter_name: hero_iter_num + ' ' + hero_iter_win + ' ' + hero_iter_stage})
 
     hero_top_tier_tbody = soup.select('[class~=champion-trend-tier-JUNGLE] > tr')
     for hero_top_tier_tbody_item in hero_top_tier_tbody:
@@ -130,7 +148,6 @@ def get_all_hero_tier(soup):
         hero_iter_num = 'T' + re.search('icon-champtier-(.*)?\.png', hero_top_tier_tbody_item.select('img')[1]['src'],
                                         re.S).group(1)
         JUG_tier_dict.update({hero_iter_name: hero_iter_num + ' ' + hero_iter_win + ' ' + hero_iter_stage})
-    print(JUG_tier_dict)
 
     hero_top_tier_tbody = soup.select('[class~=champion-trend-tier-MID] > tr')
     for hero_top_tier_tbody_item in hero_top_tier_tbody:
@@ -140,7 +157,6 @@ def get_all_hero_tier(soup):
         hero_iter_num = 'T' + re.search('icon-champtier-(.*)?\.png', hero_top_tier_tbody_item.select('img')[1]['src'],
                                         re.S).group(1)
         MID_tier_dict.update({hero_iter_name: hero_iter_num + ' ' + hero_iter_win + ' ' + hero_iter_stage})
-    print(MID_tier_dict)
 
     hero_top_tier_tbody = soup.select('[class~=champion-trend-tier-ADC] > tr')
     for hero_top_tier_tbody_item in hero_top_tier_tbody:
@@ -150,7 +166,6 @@ def get_all_hero_tier(soup):
         hero_iter_num = 'T' + re.search('icon-champtier-(.*)?\.png', hero_top_tier_tbody_item.select('img')[1]['src'],
                                         re.S).group(1)
         ADC_tier_dict.update({hero_iter_name: hero_iter_num + ' ' + hero_iter_win + ' ' + hero_iter_stage})
-    print(ADC_tier_dict)
 
     hero_top_tier_tbody = soup.select('[class~=champion-trend-tier-SUPPORT] > tr')
     for hero_top_tier_tbody_item in hero_top_tier_tbody:
@@ -160,11 +175,9 @@ def get_all_hero_tier(soup):
         hero_iter_num = 'T' + re.search('icon-champtier-(.*)?\.png', hero_top_tier_tbody_item.select('img')[1]['src'],
                                         re.S).group(1)
         SUP_tier_dict.update({hero_iter_name: hero_iter_num + ' ' + hero_iter_win + ' ' + hero_iter_stage})
-    print(SUP_tier_dict)
 
 
 def get_hero_detail(hero, opsition_url):
-    print(opgg_config['OPGG_HERO_URL'] + hero.en_name + opsition_url)
     retry_count = 5
     proxy = get_proxy()
     while retry_count > 0:
@@ -304,13 +317,12 @@ def get_hero_detail(hero, opsition_url):
             hero_inborn_two.append(hero_inborn_items_num[1].select('strong')[0].text.strip())  # 登场率
 
             hero.set_hero_detail(hero_win, hero_win_num, hero_stage, hero_stage_num, hero_skill, hero_spell,
-                                 hero_first_build_one,hero_first_build_two, hero_finally_build_one,
+                                 hero_first_build_one, hero_first_build_two, hero_finally_build_one,
                                  hero_finally_build_two, hero_finally_build_thr,
                                  hero_shoes_build_one, hero_shoes_build_two, hero_inborn_one, hero_inborn_two)
             return hero
         except urllib.error.URLError as e:
             if isinstance(e.reason, socket.timeout):
-                print(proxy + ' timeout')
                 retry_count -= 1
                 if retry_count == 2:
                     # 出错3次, 删除代理池中代理
@@ -318,8 +330,11 @@ def get_hero_detail(hero, opsition_url):
                     proxy = get_proxy()
 
         except Exception as e:
-            print(str(e))
+            log.logger.error('爬取失败！' + str(e)+opsition_url)
             retry_count -= 1
+            if retry_count == 3:
+                delete_proxy(proxy)
+                proxy = get_proxy()
     error_url.append(opgg_config['OPGG_HERO_URL'] + hero.en_name + opsition_url)
     return None
 
@@ -347,17 +362,18 @@ def main():
 
             elif OPSITIONEnum(opsition) == OPSITIONEnum.BOT:
                 hero = get_hero_detail(hero, opgg_config['OPGG_HERO_OPSITION_BOT'])
+
             else:
                 hero = get_hero_detail(hero, opgg_config['OPGG_HERO_OPSITION_SUP'])
 
             if hero:
-                print(hero.convert_to_dict())
                 save_to_mongo(hero)
         error_num += 1
         if hero == None:
             error_hero_num.append(error_num)
-    print(error_hero_num)
-    print(error_url)
+    log.logger.error('爬取失败的英雄个序号 ' + str(error_hero_num))
+    log.logger.error('爬取失败的英雄url ' + str(error_url))
+
 
 if __name__ == '__main__':
     main()

@@ -1,3 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name：     Config.py
+   Author :        Luozheng
+   date：          2019/6/28
+-------------------------------------------------
+   Change Activity:
+                   2019/6/28:
+-------------------------------------------------
+Description :
+参数设置：包括了mongo设置、opgg、王者荣耀请求date等
+
+"""
+__author__ = 'Luozheng'
+
 import datetime
 
 opgg_config = {
@@ -8,8 +24,7 @@ opgg_config = {
     'OPGG_HERO_OPSITION_SUP': '/statistics/support',
     'OPGG_HERO_OPSITION_BOT': '/statistics/bot',
     'OPGG_HERO_OPSITION_JUG': '/statistics/jungle',
-    #'LOL_INSERT_TIME': '2019-06-23',
-    'LOL_INSERT_TIME':datetime.datetime.now().strftime('%Y-%m-%d')
+    'LOL_INSERT_TIME': datetime.datetime.now().strftime('%Y-%m-%d')
 }
 
 mongo_config = {
@@ -42,23 +57,22 @@ gok_config = {
     'APP_VERSION_NAME': '3.44.104',
 
     'HERO_RANK_URL': 'https://cgi.datamore.qq.com/datamore/smobahelper/v2/herorank',
-    'HERO_Smobahelper':'https://cgi.datamore.qq.com/datamore/smobahelper/v2/herorel?',
+    'HERO_Smobahelper': 'https://cgi.datamore.qq.com/datamore/smobahelper/v2/herorel?',
 
-    'chrome_drive_path':'/home/sunny/wx/LOLGokEnv/chromedriver',
+    'chrome_drive_path': '/home/sunny/wx/LOLGokEnv/chromedriver',
 
-    'GOK_INSERT_TIME': '2019-06-24',
-    #'GOK_INSERT_TIME':datetime.datetime.now().strftime('%Y-%m-%d')
+    'GOK_INSERT_TIME':datetime.datetime.now().strftime('%Y-%m-%d')
 }
 """王者荣耀接口变更记录"""
 gok_interface_log = {
-    'post_data_20190623':{
-    'userId':'58910302',
-    'token':'tPnDNBYf',
-    'gameId':'20001',
-    'openid':'owanlsnfmzBfjurws3KxKpczmoA4',
-    'gameOpenid':'owanlsnfmzBfjurws3KxKpczmoA4',
-    'channelId':'16000168',
+    'post_data_20190623': {
+        'userId': '58910302',
+        'token': 'tPnDNBYf',
+        'gameId': '20001',
+        'openid': 'owanlsnfmzBfjurws3KxKpczmoA4',
+        'gameOpenid': 'owanlsnfmzBfjurws3KxKpczmoA4',
+        'channelId': '16000168',
     },
-    'post_url_20190623':'https://ssl.kohsocialapp.qq.com:10001/hero/getdetailranklistbyid',
-    'post_smobahelper_url_20190623':'https://ssl.kohsocialapp.qq.com:10001/hero/getheroextrainfo'
+    'post_url_20190623': 'https://ssl.kohsocialapp.qq.com:10001/hero/getdetailranklistbyid',
+    'post_smobahelper_url_20190623': 'https://ssl.kohsocialapp.qq.com:10001/hero/getheroextrainfo'
 }

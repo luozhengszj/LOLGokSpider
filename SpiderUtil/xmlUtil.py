@@ -1,3 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name：     xmlUtil.py
+   Author :        Luozheng
+   date：          2019/6/28
+-------------------------------------------------
+   Change Activity:
+                   2019/6/28:
+-------------------------------------------------
+Description :
+操作xml的工具类，主要是用于英雄别名的设置。
+"""
+__author__ = 'Luozheng'
+
 import sys
 
 sys.path.append('../')
@@ -5,7 +20,7 @@ sys.path.append('../')
 import xml.etree.ElementTree as ET
 from Config import xml_config
 
-from LOL.lolMongoClient import get_all_hero, save_xml_to_mongo
+from LOL.lolMongoClient import save_xml_to_mongo
 from GOK.gokMongoClient import gok_get_all_hero
 
 
@@ -48,5 +63,5 @@ def read_Xml():
 if __name__ == '__main__':
     # read_Xml()  # 读取并保存到Mongo
     # print('NULL')
-    #only_one_run()
+    # only_one_run()
     pass

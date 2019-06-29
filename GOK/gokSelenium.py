@@ -1,13 +1,28 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name：     gokSelenium.py
+   Author :        Luozheng
+   date：          2019/6/28
+-------------------------------------------------
+   Change Activity:
+                   2019/6/28:
+-------------------------------------------------
+Description :
+王者荣耀操作爬取数据的主要实现：包括了在官网及王者营地的爬取
+
+"""
+__author__ = 'Luozheng'
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, WebDriverException
 from selenium.webdriver.support import expected_conditions as EC
 
 import socket
 import urllib.error
-import datetime
 import ast
 import sys
 
@@ -18,6 +33,10 @@ import time
 import requests
 from GOK.gokClass import GokClass
 from GOK.gokMongoClient import gok_save_to_mongo
+
+from SpiderUtil.logUtil import Logger
+
+log = Logger('../Log/gokSelenium.log', level='debug')
 
 chrome_options = Options()
 chrome_options.add_argument('--headless')
@@ -44,7 +63,7 @@ def delete_proxy(proxy):
 
 
 def get_all_url():
-    try_num = 3
+    try_num = 5
 
     proxy = get_proxy()
     chrome_options.add_argument('--proxy-server=http://' + proxy)
@@ -61,7 +80,7 @@ def get_all_url():
             for hero_item in all_hero_items:
                 hero_url = hero_item.find_element_by_tag_name('a').get_attribute('href')
                 hero_url_name = hero_item.find_element_by_tag_name('img').get_attribute('alt')
-                hero_url_list.update({hero_url_name:hero_url})
+                hero_url_list.update({hero_url_name: hero_url})
             browser.get("https://pvp.qq.com/cp/a20170829bbgxsm/index.html")
             gok_version = wait.until(
                 EC.presence_of_element_located((By.CSS_SELECTOR,
@@ -70,12 +89,17 @@ def get_all_url():
 
             return hero_url_list, gok_version
         except TimeoutException as e:
-            print(str(e))
             try_num -= 1
-            delete_proxy(proxy)
-            proxy = get_proxy()
-            chrome_options.add_argument('--proxy-server=http://' + proxy)
-            browser.get("https://pvp.qq.com/web201605/herolist.shtml")
+            if try_num == 2:
+                delete_proxy(proxy)
+                proxy = get_proxy()
+                chrome_options.add_argument('--proxy-server=http://' + proxy)
+                browser.get("https://pvp.qq.com/web201605/herolist.shtml")
+        except e:
+            log.logger.error('get_all_url爬取失败！' + str(e))
+            if try_num == 3:
+                delete_proxy(proxy)
+                proxy = get_proxy()
     return hero_url_list
 
 
@@ -106,7 +130,6 @@ def get_one_hero_detail(hero_url, gok_hero):
     gok_hero.first_build = list_tmp[:6]
     gok_hero.second_build = list_tmp[6:12]
 
-    print(gok_hero.convert_to_dict())
     time.sleep(1)
     return gok_hero
 
@@ -117,7 +140,7 @@ all_hero_msg = []
 
 
 def get_hero_rank(lu):
-    retry_count = 3
+    retry_count = 5
     proxy = get_proxy()
     while retry_count > 0:
         try:
@@ -133,15 +156,16 @@ def get_hero_rank(lu):
             return herohtml
         except urllib.error.URLError as e:
             if isinstance(e.reason, socket.timeout):
-                print(proxy + ' timeout')
                 retry_count -= 1
-                if retry_count == 1:
+                if retry_count == 2:
                     # 出错3次, 删除代理池中代理
                     delete_proxy(proxy)
                     proxy = get_proxy()
         except Exception as e:
-            print(str(e))
-            retry_count -= 1
+            log.logger.error('get_hero_rank爬取失败！' + str(e)+lu)
+            if retry_count == 3:
+                delete_proxy(proxy)
+                proxy = get_proxy()
     return None
 
 
@@ -165,7 +189,7 @@ def parse_hero_rank(rank_data, version, position):
 
 
 def get_hero_smobahelper(hero_id):
-    retry_count = 3
+    retry_count = 5
     proxy = get_proxy()
     while retry_count > 0:
         try:
@@ -176,25 +200,27 @@ def get_hero_smobahelper(hero_id):
             data_tmp = gok_interface_log['post_data_20190623']
             data_tmp.update({'heroId': hero_id})
             hero_smobahelper = requests.post(
-                url=gok_interface_log['post_smobahelper_url_20190623'],data=data_tmp,
+                url=gok_interface_log['post_smobahelper_url_20190623'], data=data_tmp,
                 proxies=proxies).text
             return hero_smobahelper
         except urllib.error.URLError as e:
             if isinstance(e.reason, socket.timeout):
-                print(proxy + ' timeout')
                 retry_count -= 1
-                if retry_count == 1:
+                if retry_count == 2:
                     # 出错3次, 删除代理池中代理
                     delete_proxy(proxy)
                     proxy = get_proxy()
         except Exception as e:
-            print(str(e))
-            retry_count -= 1
+            log.logger.error('爬取失败！' + str(e)+str(hero_id))
+            if retry_count == 3:
+                delete_proxy(proxy)
+                proxy = get_proxy()
     return None
 
 
 def parse_hero_rank_smobahelper(hero_smobahelper, hero_tmp):
-    rank_smobahelper = ast.literal_eval(hero_smobahelper.encode('utf-8').decode('unicode_escape').replace('/','').replace('null', "''"))
+    rank_smobahelper = ast.literal_eval(
+        hero_smobahelper.encode('utf-8').decode('unicode_escape').replace('/', '').replace('null', "''"))
     beikengzhi1 = rank_smobahelper.get('data').get('bkzInfo').get('list')
     hero_tmp.beikengzhi = beikengzhi1
     kengzhi1 = rank_smobahelper.get('data').get('kzInfo').get('list')
@@ -219,20 +245,20 @@ def main():
             new_hero = get_one_hero_detail(hero_url_list.get(item.heroname), hero_smobahelper_new)
 
             if hero_position_dict.get(new_hero.heroname):
-                new_postion = hero_position_dict.get(new_hero.heroname)+' '+new_hero.herotype
-                hero_position_dict.update({item.heroname:new_postion})
+                new_postion = hero_position_dict.get(new_hero.heroname) + ' ' + new_hero.herotype
+                hero_position_dict.update({item.heroname: new_postion})
                 new_hero.set_hero_type(new_postion)
-                print(new_hero.convert_to_dict())
             else:
-                hero_position_dict.update({item.heroname:item.herotype})
-            print('hero_position_dict', str(hero_position_dict))
+                hero_position_dict.update({item.heroname: item.herotype})
             gok_save_to_mongo(new_hero)
-
 
     browser.close()
 
 
 if __name__ == '__main__':
     main()
-    if browser:
+    try:
         browser.close()
+    except WebDriverException:
+        log.logger.info('爬取完成~~~！')
+

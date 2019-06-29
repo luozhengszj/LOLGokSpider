@@ -1,7 +1,14 @@
-from enum import Enum, unique
-from Config import opgg_config
-
+# -*- coding: utf-8 -*-
 """
+-------------------------------------------------
+   File Name：     heroClass.py
+   Author :        Luozheng
+   date：          2019/6/28
+-------------------------------------------------
+   Change Activity:
+                   2019/6/28:
+-------------------------------------------------
+Description :
 mongodb中存储的是hero 某个位置的对象对应信息：
 例如：齐天大圣，在Mongo中是两条记录，打野和上单各一条。
 HeroClass类
@@ -17,6 +24,13 @@ hero_first_build_one  英雄在该位置上的首选出门装备、胜率、登�
 hero_first_build_two  英雄在该位置上的次选出门装备、胜率、登场率
 hero_spell  英雄在该位置上的技能加点
 """
+__author__ = 'Luozheng'
+
+
+from enum import Enum, unique
+from Config import opgg_config
+
+
 class HeroClass:
     hero_position = []
 

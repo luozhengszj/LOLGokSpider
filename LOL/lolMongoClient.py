@@ -1,3 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name：     lolMongoClient.py
+   Author :        Luozheng
+   date：          2019/6/28
+-------------------------------------------------
+   Change Activity:
+                   2019/6/28:
+-------------------------------------------------
+Description :
+lol操作Mongodb的模块
+"""
+__author__ = 'Luozheng'
+
 import pymongo
 import datetime
 import sys
@@ -5,6 +20,9 @@ import sys
 sys.path.append('../')
 
 from Config import mongo_config
+from SpiderUtil.logUtil import Logger
+
+log = Logger('../Log/lolMongoClient.log', level='debug')
 
 client = pymongo.MongoClient(mongo_config['MONGO_URL'])
 db = client[mongo_config['MONGO_DB']]
@@ -19,11 +37,11 @@ yesterday = today - datetime.timedelta(days=1)
 
 def save_to_mongo(hero):
     if db[mongo_config['MONGO_TABLE']].insert(hero.convert_to_dict()):
-        print('存储成功！', str(hero.convert_to_dict()))
+        log.logger.debug('存储成功！' + str(hero.cn_name))
         client.close()
         return True
     client.close()
-    print('存储失败')
+    log.logger.error('存储失败！' + str(hero.cn_name))
     return False
 
 
@@ -68,11 +86,11 @@ def get_all_hero():
 
 def save_xml_to_mongo(hero_another):
     if db[mongo_config['ANOTHER_NAME_TABLE']].insert(hero_another):
-        print('存储成功！', str(hero_another))
+        log.logger.debug('存储成功！' + str(hero_another))
         client.close()
         return True
     client.close()
-    print('存储失败')
+    log.logger.error('存储失败！' + str(hero_another))
     return False
 
 
@@ -102,11 +120,11 @@ def get_hero_name_by_another(hero_another_name):
 
 def save_rank(rank_list):
     if db[mongo_config['HERO_RANK_TABLE']].insert(rank_list):
-        print('存储成功！', str(rank_list))
+        log.logger.debug('存储成功！' + str(rank_list))
         client.close()
         return True
     client.close()
-    print('存储失败')
+    log.logger.error('存储失败！' + str(rank_list))
     return False
 
 
@@ -123,22 +141,6 @@ def lol_find_rank(day_time, position):
     client.close()
     if len(list_tmp) > 0:
         return list_tmp
-    else:
-        return None
-
-
-def find_rank():
-    search_set = db[mongo_config['MONGO_TABLE']]
-    list_tmp1 = []
-    for x in search_set.find({'day': '2019-06-19'}):
-        list_tmp1.append(x)
-
-    list_tmp2 = []
-    for x in search_set.find({'day': '2019-06-21'}):
-        list_tmp2.append(x)
-
-    for i in range(0, 198):
-        print(list_tmp1[i]['cn_name'], list_tmp2[i]['cn_name'])
     else:
         return None
 

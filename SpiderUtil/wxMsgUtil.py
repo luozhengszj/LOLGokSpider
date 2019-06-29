@@ -1,3 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+-------------------------------------------------
+   File Name：     wxMsgUtil.py
+   Author :        Luozheng
+   date：          2019/6/28
+-------------------------------------------------
+   Change Activity:
+                   2019/6/28:
+-------------------------------------------------
+Description :
+接口查询的类，主要是接收参数（可查看__main__，进行测试），返回查询数据。
+"""
+__author__ = 'Luozheng'
+
 import re
 import datetime
 
@@ -5,6 +20,10 @@ from LOL.lolMongoClient import get_hero_name_by_another, \
     get_hero, lol_find_rank
 from GOK.gokMongoClient import gok_get_hero, gok_get_herotypename
 from MongoClient import user_find_type, insert_user_find_type, update_user_find_type, save_follower_to_mongo
+
+from SpiderUtil.logUtil import Logger
+
+log = Logger('../Log/gokSelenium.log', level='debug')
 
 lol_game = ['英雄联盟', 'LOL', 'lol', '撸啊撸']
 gok_game = ['王者', '王者荣耀', '荣耀', '农药', '王者农药']
@@ -51,7 +70,7 @@ def hand_text_msg(xml_dict):
             else:
                 if user_content in lol_game:
                     update_user_find_type(user_id, user_content)
-                    back_msg = """切换 LOL 成功\r\n\r\n输入【排行 位置】查询位置英雄排行\r\n\r\n如【排行 上】可查看上路强势英雄\r\n\r\n输入【英雄名】查询英雄情况\r\n\r\n输入【英雄名 位置】查询英雄该位置玩法\r\n\r\n回复【说明】查看查询方法"""
+                    back_msg = """切换 LOL 成功\r\n\r\n输入【位置】查询位置英雄排行\r\n\r\n如【上】可查看上路强势英雄\r\n\r\n输入【英雄名】查询英雄情况\r\n\r\n输入【英雄名 位置】查询英雄该位置玩法\r\n\r\n回复【说明】查看查询方法"""
 
                 elif user_content in gok_game:
                     update_user_find_type(user_id, user_content)
@@ -60,7 +79,7 @@ def hand_text_msg(xml_dict):
             # 用户未确定游戏类型
             if user_content in lol_game:
                 insert_user_find_type(user_id, user_content)
-                back_msg = """切换 LOL 成功\r\n\r\n输入【排行 位置】查询位置英雄排行\r\n\r\n如【排行 上】可查看上路强势英雄\r\n\r\n输入【英雄名】查询英雄情况\r\n\r\n输入【英雄名 位置】查询英雄该位置玩法"""
+                back_msg = """切换 LOL 成功\r\n\r\n输入【位置】查询位置英雄排行\r\n\r\n如【上】可查看上路强势英雄\r\n\r\n输入【英雄名】查询英雄情况\r\n\r\n输入【英雄名 位置】查询英雄该位置玩法"""
 
             elif user_content in gok_game:
                 back_msg = """切换 王者荣耀 成功\r\n\r\n输入【排行】查询前30英雄胜率\r\n\r\n如【类型】可查看类型强势英雄\r\n\r\n如输入【坦克】查询胜率前30坦克英雄\r\n\r\n可输入英雄名、刺客、坦克、射手、法师、辅助、排行、上路、下路、中路、辅助、打野"""
@@ -78,42 +97,40 @@ def hand_text_msg(xml_dict):
 def hand_lol(user_msg):
     user_msg = user_msg.split(' ')
     if len(user_msg) == 1:
-        hero_another_name = get_hero_name_by_another(user_msg[0])
-        if hero_another_name:
-            hero_list = get_hero(hero_another_name['name'])
-            return handle_hero_list_to_wx_msg(hero_list)
+        check_flag = check_msg_position(user_msg[0])
+        if check_flag == None:
+            hero_another_name = get_hero_name_by_another(user_msg[0])
+            if hero_another_name:
+                hero_list = get_hero(hero_another_name['name'])
+                return handle_hero_list_to_wx_msg(hero_list)
+            else:
+                return '英雄名输入有误\r\n\r\n可尝试【盖伦】、或【上路】'
         else:
-            return '英雄名输入有误\r\n\r\n可尝试【盖伦】'
-    elif len(user_msg) > 1:
-        user_msg = user_msg[:2]
-        if (user_msg[0] == '排行'):
-            check_flag = check_msg_position(user_msg[1])
-            if check_flag == None:
-                return None
             hero_rank = lol_find_rank(yesterday.strftime('%Y-%m-%d'), check_flag)
             if hero_rank and len(hero_rank) > 0:
                 return handle_hero_rank_to_wx_msg(hero_rank)
             else:
-                return '输入有误\r\n\r\n可尝试【排行 上路】'
-        else:
-            hero_another_name = get_hero_name_by_another(user_msg[0])
-            if hero_another_name == None:
-                return '英雄名输入有误\r\n\r\n可尝试【盖伦 上路】'
-            hero_another_name = hero_another_name['name']
-            hero_list = get_hero(hero_another_name)
-            check_flag = check_msg_position(user_msg[1])
-            if check_flag:
-                if hero_list and len(hero_list) == 1:
-                    return handle_hero_one_to_wx_msg(hero_list[0])
-                elif len(hero_list) > 1:
-                    for hero in reversed(hero_list):
-                        if hero['hero_position'][0] == check_flag:
-                            return handle_hero_one_to_wx_msg(hero)
-                    return hero_another_name + '无此位置数据'
-                else:
-                    return hero_another_name + '数据暂时缺失'
+                return '输入有误\r\n\r\n可尝试【上路】'
+    elif len(user_msg) > 1:
+        user_msg = user_msg[:2]
+        hero_another_name = get_hero_name_by_another(user_msg[0])
+        if hero_another_name == None:
+            return '英雄名输入有误\r\n\r\n可尝试【盖伦 上路】'
+        hero_another_name = hero_another_name['name']
+        hero_list = get_hero(hero_another_name)
+        check_flag = check_msg_position(user_msg[1])
+        if check_flag:
+            if hero_list and len(hero_list) == 1:
+                return handle_hero_one_to_wx_msg(hero_list[0])
+            elif len(hero_list) > 1:
+                for hero in reversed(hero_list):
+                    if hero['hero_position'][0] == check_flag:
+                        return handle_hero_one_to_wx_msg(hero)
+                return hero_another_name + '无此位置数据'
             else:
-                return '位置输入有误\r\n\r\n可尝试【盖伦 上路】'
+                return hero_another_name + '数据暂时缺失'
+        else:
+            return '位置输入有误\r\n\r\n可尝试【盖伦 上路】'
 
 
 def handle_hero_one_to_wx_msg(hero):
@@ -193,7 +210,8 @@ def set_Bottom(position):
 
 def check_msg_position(position):
     if len(position) < 7:
-        check_dict = {'上单': ['上单', '上', '上路'], '打野': ['打野', '野'], 'Bottom': ['bottom', 'ad', 'adc', 'AD', 'ADC', '下路'],
+        check_dict = {'上单': ['上单', '上', '上路'], '打野': ['打野', '野'],
+                      'Bottom': ['bottom', 'ad', 'adc', 'AD', 'ADC', '下路', '下'],
                       '中单': ['中', '中路', '中单'], '辅助': ['辅助', '辅', '下路']}
         for key, value in check_dict.items():
             for i in value:
@@ -258,7 +276,8 @@ def gok_handle_herotypename_to_wx_msg(hero_list):
         msg_hero = '英雄 类型 热度 胜率|登场率' + line_feed + line_feed
         for hero in hero_list:
             msg_hero = msg_hero + hero['heroname'] + ' ' + hero['herotypename'] + ' ' + hero['tRank'] + ' ' + str(
-                float(hero.get('winpercent')) * 100)[:4] + '|' + str(float(hero.get('gameactpercnt')) * 100)[:4] + line_feed
+                float(hero.get('winpercent')) * 100)[:4] + '|' + str(float(hero.get('gameactpercnt')) * 100)[
+                                                                 :4] + line_feed
         msg = line_feed + '版本：' + hero_list[0]['version'] + '  日期：' + hero_list[0]['day']
         return msg_hero + msg
     return 'error'
@@ -274,7 +293,7 @@ def clean_zh_text(text):
 def lolshuoming():
     line_feed = '\r\n'
     back_msg = '订阅号可查询LOL、王者荣耀英雄数据' + line_feed + line_feed + '初次使用及切换查询需要输入【LOL】或【王者荣耀】' \
-               + line_feed + line_feed + 'LOL 查询可输入别名' + line_feed + '输入【排行 位置】查询位置强势英雄' \
+               + line_feed + line_feed + 'LOL 查询可输入别名' + line_feed + '输入【位置】查询位置强势英雄，如【上】、【下】、【辅】、【野】、【中】' \
                + line_feed + '输入【英雄名】或查看英雄情况' + line_feed + '输入【英雄名 位置】查看详细攻略' + line_feed + 'LOL数据来自opgg' \
                + line_feed + line_feed + '欢迎到到个人网站:richule.com 交流'
     return back_msg
@@ -306,7 +325,7 @@ if __name__ == '__main__':
     <FromUserName>12345</FromUserName>
     <CreateTime>12345678</CreateTime>
     <MsgType>盖伦</MsgType>
-    <Content>辅助</Content>
+    <Content>强</Content>
     <MsgId>LOL</MsgId>
     </xml>
        """
